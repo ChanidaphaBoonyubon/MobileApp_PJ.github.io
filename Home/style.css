@@ -15,9 +15,12 @@
 
  /*PJCard*/
  .project-interactive-container {
-     width: 100%;
-     max-width: 600px;
-     margin: auto;
+      width: 100%;
+    max-width: 480px;
+    flex: 1 1 400px;
+    display: flex;
+    align-items: stretch;
+     margin: 2rem;
  }
 
  .project-card {
@@ -28,6 +31,10 @@
      position: relative;
      text-align: center;
      animation: fadeIn 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 15px;
  }
 
  @keyframes fadeIn {
@@ -44,12 +51,12 @@
 
  .compact-view .project-img {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
+    object-position: center;
     border-radius: 30px;
     border: 5px solid #F3E6A2;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-     margin-bottom: 15px;
  }
 
  .project-title {
@@ -67,8 +74,9 @@
  .project-desc {
      color: #444;
      font-size: 1.2rem;
-     line-height: 1.6;
-     margin-bottom: 20px;
+     line-height: 1.5;
+     flex-grow: 1;
+     min-height: 70px;
  }
 
  .read-more-btn {
@@ -82,6 +90,7 @@
      color: #c79521;
      font-weight: 600;
      transition: 0.3s;
+     margin-top: auto;
  }
  .read-more-btn:hover {
      background-color: #fff8e1;
@@ -112,9 +121,12 @@
      text-align: left;
      margin-bottom: 30px;
      margin-top: 15px;
+     min-height: 130px;
  }
 
  .project-img-large {
+    height: 120px;
+    object-fit: cover;
      width: 45%;
      border-radius: 15px;
     border: 3px solid #F3E6A2;
@@ -130,10 +142,11 @@
      background-color: #fdf1cd;
      border-radius: 15px;
      padding: 40px;
-     min-height: 200px;
+     min-height: 220px;
      display: flex;
      align-items: center;
      justify-content: center;
+     flex: 1;
  }
 
  .tab-content p {
@@ -231,11 +244,13 @@
      width: 100%;
      max-width: 1200px;
      margin: 40px auto;
+     align-items: stretch;
  }
  .project-interactive-container {
      width: 100%;
      max-width: 480px;
      flex: 1 1 400px;
+     display: flex;
  }
 
  /* Scrollpic */
