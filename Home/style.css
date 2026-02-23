@@ -13,245 +13,347 @@
      min-height: 100vh;
  }
 
+/* Circle */
+.circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #161942;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+
+    background: conic-gradient(
+        #e6d89b 0deg 90deg,
+        #e6d89b 90deg 180deg,
+        #e6d89b 180deg 270deg,
+        #e6d89b 270deg 360deg
+    );
+
+    border: 3px solid #161942;
+}
+
+/* เส้นแบ่ง */
+.circle::before,
+.circle::after {
+    content: "";
+    position: absolute;
+    background: #161942;
+}
+
+.circle::before {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle::after {
+    height: 3px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* กล่องตรงกลาง */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #78C0E6;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+
+    z-index: 10; 
+    
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.circle::before,
+.circle::after {
+    content: "";
+    position: absolute;
+    background: #161942;
+    z-index: 1;
+}
+.label {
+    position: absolute;
+    width: 45%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+.top-right {
+    top: 25%;
+    right: 25%;
+    transform: translate(50%, -50%);
+}
+
+.top-left {
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-left {
+    bottom: 25%;
+    left: 25%;
+    transform: translate(-50%, 50%);
+}
+
+.bottom-right {
+    bottom: 25%;
+    right: 25%;
+    transform: translate(50%, 50%);
+}
+
  /*PJCard*/
  .project-interactive-container {
-      width: 100%;
-    max-width: 480px;
-    flex: 1 1 400px;
-    display: flex;
-    align-items: stretch;
-     margin: 2rem;
- }
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
 
- .project-card {
-     background-color: #f0c356;
-     border-radius: 20px;
-     padding: 25px;
-     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-     position: relative;
-     text-align: center;
-     animation: fadeIn 0.4s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    gap: 15px;
- }
+.project-card {
+    background-color: #f0c356; 
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out; 
+}
 
- @keyframes fadeIn {
-     from {
-         opacity: 0;
-         transform: scale(0.95);
-     }
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-     to {
-         opacity: 1;
-         transform: scale(1);
-     }
- }
-
- .compact-view .project-img {
+/* --- กล่องเล็กตอนเริ่มต้น --- */
+.compact-view .project-img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    object-position: center;
     border-radius: 30px;
+    margin-bottom: 15px;
     border: 5px solid #F3E6A2;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
- }
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
 
- .project-title {
-    font-weight: 700;
+.project-title {
+   font-weight: 700;
      color: #1e2b40;
-       text-shadow:
-        -1px 0 #F3E6A2,
+     text-shadow:
+         -1px 0 #F3E6A2,
          1px 0 #F3E6A2,
          0 -1px #F3E6A2,
          0 1px #F3E6A2;
      font-size: 1.5rem;
      margin-bottom: 10px;
- }
+}
 
- .project-desc {
-     color: #444;
-     font-size: 1.2rem;
-     line-height: 1.5;
-     flex-grow: 1;
-     min-height: 70px;
- }
+.project-desc {
+    color: #444;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
- .read-more-btn {
-     font-family: "THK2D", sans-serif;
-     background-color: #fdf1cd;
-     border: 1px solid #c7a14e;
-     border-radius: 25px;
-     padding: 10px 40px;
-     cursor: pointer;
-     font-size: 1.2rem;
-     color: #c79521;
-     font-weight: 600;
-     transition: 0.3s;
-     margin-top: auto;
- }
- .read-more-btn:hover {
-     background-color: #fff8e1;
-     transform: scale(1.05);
- }
+.read-more-btn {
+    background-color: #fdf1cd;
+    border: 1px solid #c7a14e;
+    border-radius: 25px;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #1e2b40;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
- .close-btn {
-     position: absolute;
-     top: 15px;
-     right: 25px;
-     background: none;
-     border: none;
-     font-size: 1.8rem;
-     color: #d19a3b;
-     cursor: pointer;
-     transition: 0.3s;
- }
+.read-more-btn:hover {
+    background-color: #fff8e1;
+    transform: scale(1.05);
+}
 
- .close-btn:hover {
-     color: #a37222;
-     transform: scale(1.1);
- }
+/* --- กล่องใหญ่ตอนกดขยาย --- */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #d19a3b;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
- .expanded-header {
-     display: flex;
-     gap: 20px;
-     align-items: center;
-     text-align: left;
-     margin-bottom: 30px;
-     margin-top: 15px;
-     min-height: 130px;
- }
+.close-btn:hover { 
+    color: #a37222; 
+    transform: scale(1.1); 
+}
 
- .project-img-large {
-    height: 120px;
-    object-fit: cover;
-     width: 45%;
-     border-radius: 15px;
-    border: 3px solid #F3E6A2;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
- }
+.expanded-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
 
- .expanded-title-area {
-     width: 55%;
- }
+.project-img-large {
+    width: 45%;
+    border-radius: 15px;
+     border: 3px solid #F3E6A2;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
 
- .expanded-content-area {
-     position: relative;
-     background-color: #fdf1cd;
-     border-radius: 15px;
-     padding: 40px;
-     min-height: 220px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex: 1;
- }
+.expanded-title-area {
+    width: 55%;
+}
 
- .tab-content p {
-     font-size: 0.95rem;
-     color: #444;
-     line-height: 1.8;
-     margin: 0;
-     text-align: left;
- }
+.expanded-content-area {
+    position: relative;
+    background-color: #fdf1cd;
+    border-radius: 15px;
+    padding: 40px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
- .side-tab-btn {
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     writing-mode: vertical-rl;
-     background-color: #dfb241;
-     border: none;
-     padding: 20px 10px;
-     border-radius: 10px;
-     cursor: pointer;
-     color: #9c731e;
-     font-weight: 600;
-     height: 140px;
-     transition: 0.3s;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-family: "THK2D", sans-serif;
-      font-size: 1rem;
- }
+.tab-content p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.8;
+    margin: 0;
+    text-align: left;
+}
 
- .side-tab-btn.left-tab {
-     left: -15px;
-     transform: translateY(-50%) rotate(180deg);
- }
+/* --- ปุ่มแท็บแนวตั้ง --- */
+.side-tab-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    background-color: #dfb241;
+    border: none;
+    padding: 20px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "THK2D", sans-serif;
+    font-size: 1rem;
+    color: #9c731e;
+    font-weight: 600;
+    height: 140px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
- .side-tab-btn.right-tab {
-     right: -15px;
- }
+.side-tab-btn.left-tab {
+    left: -15px;
+    transform: translateY(-50%) rotate(180deg);
+}
 
- .side-tab-btn.active,
- .side-tab-btn:hover {
-     background-color: #f0c356;
-     color: white;
-     z-index: 10;
- }
+.side-tab-btn.right-tab {
+    right: -15px;
+}
 
- @media (max-width: 768px) {
-     .expanded-header {
-         flex-direction: column;
-         text-align: center;
-         margin-top: 25px;
-     }
+.side-tab-btn.active, .side-tab-btn:hover {
+    background-color: #c79521;
+    color: white;
+    z-index: 10;
+}
 
-     .project-img-large {
-         width: 100%;
-         height: 200px;
-         object-fit: cover;
-     }
+/* =========================================
+   Responsive สำหรับมือถือและหน้าจอขนาดเล็ก
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. จัดเรียงส่วนหัว (รูป + ข้อความ) ให้เรียงลงมาแทนซ้ายขวา */
+    .expanded-header { 
+        flex-direction: column; 
+        text-align: center;
+        margin-top: 25px; /* ดันลงมาหลบปุ่มกากบาท (X) */
+    }
+    
+    .project-img-large { 
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover; 
+    }
+    
+    .expanded-title-area { 
+        width: 100%; 
+    }
 
-     .expanded-title-area {
-         width: 100%;
-     }
-     .expanded-content-area {
-         padding: 70px 20px 25px 20px;
-         align-items: flex-start;
-     }
+    /* 2. จัดการพื้นที่กล่องข้อความด้านล่าง */
+    .expanded-content-area { 
+        /* เว้นที่ด้านบน 60px เพื่อให้ปุ่มแท็บมาวางได้โดยไม่ทับข้อความ */
+        padding: 70px 20px 25px 20px; 
+        align-items: flex-start; /* ให้ข้อความเริ่มจากด้านบน */
+    }
+    
+    .tab-content p {
+        font-size: 0.9rem; /* ปรับฟอนต์ให้ใหญ่ขึ้นนิดนึงเพื่อให้อ่านบนมือถือง่าย */
+    }
 
-     .tab-content p {
-         font-size: 0.9rem;
-     }
-     .side-tab-btn {
-         position: absolute;
-         top: 0;
-         writing-mode: horizontal-tb;
-         height: 50px;
-         width: 50%;
-         font-size: 0.95rem;
-         border-radius: 15px 15px 0 0;
-         transform: none !important;
-     }
-     .side-tab-btn.left-tab {
-         left: 0;
-     }
-     .side-tab-btn.right-tab {
-         right: 0;
-     }
- }
- .projects-grid {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 30px;
-     justify-content: center;
-     width: 100%;
-     max-width: 1200px;
-     margin: 40px auto;
-     align-items: stretch;
- }
- .project-interactive-container {
-     width: 100%;
-     max-width: 480px;
-     flex: 1 1 400px;
-     display: flex;
- }
+    /* 3. 🌟 ไฮไลท์: เปลี่ยนปุ่มแนวตั้ง เป็นแท็บแนวนอนด้านบน */
+    .side-tab-btn { 
+        position: absolute;
+        top: 0; /* เอาไปแปะติดขอบบนของกล่องเนื้อหา */
+        writing-mode: horizontal-tb; /* เปลี่ยนตัวหนังสือเป็นแนวนอนปกติ */
+        height: 50px; /* ความสูงของปุ่มตอนเป็นมือถือ */
+        width: 50%; /* แบ่งครึ่งจอ ซ้าย-ขวา พอดีเป๊ะ */
+        font-size: 0.95rem;
+        border-radius: 15px 15px 0 0; /* ทำมุมมนเฉพาะด้านบน 2 ฝั่ง */
+        transform: none !important; /* ยกเลิกเอฟเฟกต์หมุนกลับหัว */
+    }
+
+    /* ปุ่มซ้ายให้อยู่ชิดซ้าย */
+    .side-tab-btn.left-tab { 
+        left: 0; 
+    }
+
+    /* ปุ่มขวาให้อยู่ชิดขวา */
+    .side-tab-btn.right-tab { 
+        right: 0; 
+    }
+}
+/* =========================================
+   จัด Grid ให้โปรเจกต์เรียงต่อกัน
+   ========================================= */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap; /* ถ้าเกินจอให้เด้งลงบรรทัดใหม่ */
+    gap: 30px; /* ระยะห่างระหว่างกล่อง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+    align-items: flex-start; /* 🌟 สำคัญมาก: ทำให้กล่องอื่นไม่ยืดความสูงตามกล่องที่ขยายร่าง */
+    width: 100%;
+    max-width: 1200px; /* ความกว้างสูงสุดของพื้นที่ทั้งหมด */
+    margin: 40px auto;
+}
+
+/* ปรับขนาดกล่องเล็กน้อยเพื่อให้เรียงกันได้สวย */
+.project-interactive-container {
+    width: 100%;
+    max-width: 480px; /* ขนาดความกว้างเดิมที่คุณชอบ */
+    flex: 1 1 400px; /* ถ้าหน้าจอแคบลง ให้หดตามได้ แต่ไม่เล็กกว่า 400px */
+}
+
 
  /* Scrollpic */
  :root {
