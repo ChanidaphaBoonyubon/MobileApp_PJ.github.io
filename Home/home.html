@@ -9,26 +9,27 @@
 </head>
 
 <body>
-    
-   <div class="projects-grid">
+
+    <div class="projects-grid">
 
         <div class="project-interactive-container">
             <div class="project-card compact-view">
                 <img src="/asset/PJ/Measurement Multimeter.png" alt="Measurement Multimeter" class="project-img">
                 <h3 class="project-title">Measurement Multimeter</h3>
                 <p class="project-desc">อุปกรณ์วัดค่าที่สามารถวัดค่าได้หลากหลาย ตั้งแต่อุณหภูมิไปจนถึง
-ปริมาณแก๊ส LPG ในรูปแบบที่ไม่เหมือนใคร</p>
+                    ปริมาณแก๊ส LPG ในรูปแบบที่ไม่เหมือนใคร</p>
                 <button class="read-more-btn" onclick="openExpanded(this)">Read More</button>
             </div>
 
             <div class="project-card expanded-view" style="display: none;">
                 <button class="close-btn" onclick="closeExpanded(this)">&#10005;</button>
                 <div class="expanded-header">
-                    <img src="/asset/PJ/Measurement Multimeter.png" alt="Measurement Multimeter" class="project-img-large">
+                    <img src="/asset/PJ/Measurement Multimeter.png" alt="Measurement Multimeter"
+                        class="project-img-large">
                     <div class="expanded-title-area">
                         <h3 class="project-title">Measurement Multimeter</h3>
                         <p class="project-desc">อุปกรณ์วัดค่าที่สามารถวัดค่าได้หลากหลาย ตั้งแต่อุณหภูมิไปจนถึง
-ปริมาณแก๊ส LPG ในรูปแบบที่ไม่เหมือนใคร</p>
+                            ปริมาณแก๊ส LPG ในรูปแบบที่ไม่เหมือนใคร</p>
                     </div>
                 </div>
                 <div class="expanded-content-area">
@@ -36,10 +37,18 @@
                     <button class="side-tab-btn right-tab" onclick="switchTab(this, 2)">วิธีการใช้งาน</button>
 
                     <div class="tab-content tab-1">
-                        <p>ประกอบไปด้วยเซนเซอร์ 2 ตัว คือ DHT 22 Digital Temperature and Humidity ใช้สำหรับตรวจจับอุณหภูมิและความชื้น และ MQ-5 LPG Natural Gas Sensor Module สำหรับวัดปริมาณแก๊ส LPG เมื่อมีแก๊สรั่วไหล และมีอุปกรณ์ DS 3231 RTC Clock Memory เพื่อนับเวลา</p>
+                        <p>ประกอบไปด้วยเซนเซอร์ 2 ตัว คือ DHT 22 Digital Temperature and Humidity
+                            ใช้สำหรับตรวจจับอุณหภูมิและความชื้น และ MQ-5 LPG Natural Gas Sensor Module
+                            สำหรับวัดปริมาณแก๊ส LPG เมื่อมีแก๊สรั่วไหล และมีอุปกรณ์ DS 3231 RTC Clock Memory
+                            เพื่อนับเวลา</p>
                     </div>
                     <div class="tab-content tab-2" style="display: none;">
-                        <p>เสียบสาย USB เพื่อจ่ายไฟแก่ Arduino จะแสดงข้อความ Measurement Multimeter กดสวิตช์ 1 ครั้งจะแสดงเวลา เมื่อกดสวิตช์อีก 1 ครั้ง จะแสดงอุณหภูมิและความชื้น เมื่อมีอุณหภูมิน้อยกว่า 25°c LED จะติดเป็นสีเขียว เมื่ออุณหภูมิมากกว่า 25°c LED จะติดเป็นสีเหลือง และเมื่ออุณหภูมิสูงเกิน 30°c LED จะติดเป็นสีแดง และแสดงความชื้นในอากาศเป็น % เมื่อกดสวิตช์อีก 1 ครั้งจะแสดงปริมาณแก๊ส LPG เป็น % เมื่อกดสวิตช์อีก 1 ครั้งจะแสดงเวลาเหมือนเดิม</p>
+                        <p>เสียบสาย USB เพื่อจ่ายไฟแก่ Arduino จะแสดงข้อความ Measurement Multimeter กดสวิตช์ 1
+                            ครั้งจะแสดงเวลา เมื่อกดสวิตช์อีก 1 ครั้ง จะแสดงอุณหภูมิและความชื้น เมื่อมีอุณหภูมิน้อยกว่า
+                            25°c LED จะติดเป็นสีเขียว เมื่ออุณหภูมิมากกว่า 25°c LED จะติดเป็นสีเหลือง
+                            และเมื่ออุณหภูมิสูงเกิน 30°c LED จะติดเป็นสีแดง และแสดงความชื้นในอากาศเป็น %
+                            เมื่อกดสวิตช์อีก 1 ครั้งจะแสดงปริมาณแก๊ส LPG เป็น % เมื่อกดสวิตช์อีก 1
+                            ครั้งจะแสดงเวลาเหมือนเดิม</p>
                     </div>
                 </div>
             </div>
@@ -57,7 +66,7 @@
                 <div class="expanded-header">
                     <img src="/asset/PJ/blendingMachine.png" alt="blendingMachine" class="project-img-large">
                     <div class="expanded-title-area">
-                        <h3 class="project-title">Automatic Blending Machine</h3>     
+                        <h3 class="project-title">Automatic Blending Machine</h3>
                         <p class="project-desc">เมื่อเครื่องดื่มของคุณ จะคงความอร่อยได้ทุกครั้งทุกที่ทุกเวลา</p>
                     </div>
                 </div>
@@ -70,7 +79,8 @@
                     </div>
                     <div class="tab-content tab-2" style="display: none;">
                         <p>เมื่อกดปุ่มปั๊มน้ำจะทำงานโดยปล่อยลมไปดันน้ำในภาชนะทั้งสองขึ้นมาในปริมาณที่ได้
-กำหนดสัดส่วนไว้ด้วยเวลาที่ได้ออกแบบไว้ในโปรแกรม โดยสามารถนำมาประยุกต์ใช้กับการชงเครื่องดื่ม หรือ การรดน้ำต้นไม้การทำสวนได้</p>
+                            กำหนดสัดส่วนไว้ด้วยเวลาที่ได้ออกแบบไว้ในโปรแกรม โดยสามารถนำมาประยุกต์ใช้กับการชงเครื่องดื่ม
+                            หรือ การรดน้ำต้นไม้การทำสวนได้</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +90,7 @@
                 <img src="/asset/PJ/safetyCap.png" alt="safetyCap" class="project-img">
                 <h3 class="project-title">Safety Cap</h3>
                 <p class="project-desc">หมวกที่มาพร้อมกับเซนเซอร์ตรวจจับความเร่ง
-แบบ 3 แกน และชุดหลอดไฟ LED เพื่อความปลอดภัยบนท้องถนนของคุณและคนรอบตัว</p>
+                    แบบ 3 แกน และชุดหลอดไฟ LED เพื่อความปลอดภัยบนท้องถนนของคุณและคนรอบตัว</p>
                 <button class="read-more-btn" onclick="openExpanded(this)">Read More</button>
             </div>
 
@@ -91,7 +101,7 @@
                     <div class="expanded-title-area">
                         <h3 class="project-title">Safety Cap</h3>
                         <p class="project-desc">หมวกที่มาพร้อมกับเซนเซอร์ตรวจจับความเร่ง
-แบบ 3 แกน และชุดหลอดไฟ LED เพื่อความปลอดภัยบนท้องถนนของคุณและคนรอบตัว</p>
+                            แบบ 3 แกน และชุดหลอดไฟ LED เพื่อความปลอดภัยบนท้องถนนของคุณและคนรอบตัว</p>
                     </div>
                 </div>
                 <div class="expanded-content-area">
@@ -99,19 +109,26 @@
                     <button class="side-tab-btn right-tab" onclick="switchTab(this, 2)">วิธีการใช้งาน</button>
 
                     <div class="tab-content tab-1">
-                        <p>เซนเซอร์ตรวจจับความเร่งแบบ 3 แกน (accelerometer sensor : รุ่น ADXL345) จะถูกติดตั้งไว้ที่ด้านบนบริเวณกึ่งกลางของหมวก เมื่อหมวกมีการเอียงไปมาตัวเซนเซอร์จะวัดค่าแกน X Y และ Z แล้วนำค่าที่ได้มาคำนวณเป็นองศาและเขียนโปรแกรมผ่าน Arduino เพื่อควบคุมหลอดไฟ LED ให้มืด-สว่างตามองศาที่กำหนด</p>
+                        <p>เซนเซอร์ตรวจจับความเร่งแบบ 3 แกน (accelerometer sensor : รุ่น ADXL345)
+                            จะถูกติดตั้งไว้ที่ด้านบนบริเวณกึ่งกลางของหมวก เมื่อหมวกมีการเอียงไปมาตัวเซนเซอร์จะวัดค่าแกน
+                            X Y และ Z แล้วนำค่าที่ได้มาคำนวณเป็นองศาและเขียนโปรแกรมผ่าน Arduino เพื่อควบคุมหลอดไฟ LED
+                            ให้มืด-สว่างตามองศาที่กำหนด</p>
                     </div>
                     <div class="tab-content tab-2" style="display: none;">
-                        <p>เซนเซอร์ตรวจจับความเร่งแบบ 3 แกน (accelerometer sensor : รุ่น ADXL345) จะถูกติดตั้งไว้ที่ด้านบนบริเวณกึ่งกลางของหมวก เมื่อหมวกมีการเอียงไปมาตัวเซนเซอร์จะวัดค่าแกน X Y และ Z แล้วนำค่าที่ได้มาคำนวณเป็นองศาและเขียนโปรแกรมผ่าน Arduino เพื่อควบคุมหลอดไฟ LED ให้มืด-สว่างตามองศาที่กำหนด.</p>
+                        <p>เซนเซอร์ตรวจจับความเร่งแบบ 3 แกน (accelerometer sensor : รุ่น ADXL345)
+                            จะถูกติดตั้งไว้ที่ด้านบนบริเวณกึ่งกลางของหมวก เมื่อหมวกมีการเอียงไปมาตัวเซนเซอร์จะวัดค่าแกน
+                            X Y และ Z แล้วนำค่าที่ได้มาคำนวณเป็นองศาและเขียนโปรแกรมผ่าน Arduino เพื่อควบคุมหลอดไฟ LED
+                            ให้มืด-สว่างตามองศาที่กำหนด.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="project-interactive-container">
             <div class="project-card compact-view">
-                <img src="/asset/PJ/TrashBin.png" alt="TrashBin" class="project-img"> 
+                <img src="/asset/PJ/TrashBin.png" alt="TrashBin" class="project-img">
                 <h3 class="project-title">ถังวัดปริมาณ</h3>
-                <p class="project-desc">จะดีแค่ไหน ถ้าถังขยะบอกคุณได้ว่าคุณควรจะทำอะไรซักทีได้แล้วนะ ก่อนที่มันจะเต็มไปกว่านี้!</p>
+                <p class="project-desc">จะดีแค่ไหน ถ้าถังขยะบอกคุณได้ว่าคุณควรจะทำอะไรซักทีได้แล้วนะ
+                    ก่อนที่มันจะเต็มไปกว่านี้!</p>
                 <button class="read-more-btn" onclick="openExpanded(this)">Read More</button>
             </div>
 
@@ -121,7 +138,8 @@
                     <img src="/asset/PJ/TrashBin.png" alt="TrashBin" class="project-img-large">
                     <div class="expanded-title-area">
                         <h3 class="project-title">ถังวัดปริมาณ</h3>
-                        <p class="project-desc">จะดีแค่ไหน ถ้าถังขยะบอกคุณได้ว่าคุณควรจะทำอะไรซักทีได้แล้วนะ ก่อนที่มันจะเต็มไปกว่านี้!</p>
+                        <p class="project-desc">จะดีแค่ไหน ถ้าถังขยะบอกคุณได้ว่าคุณควรจะทำอะไรซักทีได้แล้วนะ
+                            ก่อนที่มันจะเต็มไปกว่านี้!</p>
                     </div>
                 </div>
                 <div class="expanded-content-area">
@@ -129,10 +147,14 @@
                     <button class="side-tab-btn right-tab" onclick="switchTab(this, 2)">วิธีการใช้งาน</button>
 
                     <div class="tab-content tab-1">
-                        <p>เมื่อในถังไม่มีขยะอยู่ ตัวแสดงผลจะแสดงเป็น 0 ตัวแสดงผลจะมีค่าเพิ่มขึ้นเรื่อยๆตามปริมาณขยะที่อยู่ภายในถัง และเมื่อมีขยะเต็ม (มีปริมาณมากพอที่ควรทิ้ง) ตัวแสดงผลจะแสดงเป็นคำว่า FULL</p>
+                        <p>เมื่อในถังไม่มีขยะอยู่ ตัวแสดงผลจะแสดงเป็น 0
+                            ตัวแสดงผลจะมีค่าเพิ่มขึ้นเรื่อยๆตามปริมาณขยะที่อยู่ภายในถัง และเมื่อมีขยะเต็ม
+                            (มีปริมาณมากพอที่ควรทิ้ง) ตัวแสดงผลจะแสดงเป็นคำว่า FULL</p>
                     </div>
                     <div class="tab-content tab-2" style="display: none;">
-                        <p>เมื่อในถังไม่มีขยะอยู่ ตัวแสดงผลจะแสดงเป็น 0 ตัวแสดงผลจะมีค่าเพิ่มขึ้นเรื่อยๆตามปริมาณขยะที่อยู่ภายในถัง และเมื่อมีขยะเต็ม (มีปริมาณมากพอที่ควรทิ้ง) ตัวแสดงผลจะแสดงเป็นคำว่า FULL</p>
+                        <p>เมื่อในถังไม่มีขยะอยู่ ตัวแสดงผลจะแสดงเป็น 0
+                            ตัวแสดงผลจะมีค่าเพิ่มขึ้นเรื่อยๆตามปริมาณขยะที่อยู่ภายในถัง และเมื่อมีขยะเต็ม
+                            (มีปริมาณมากพอที่ควรทิ้ง) ตัวแสดงผลจะแสดงเป็นคำว่า FULL</p>
                     </div>
                 </div>
             </div>
@@ -166,7 +188,7 @@
         <div class="item item9">
             <img src="/asset/Pic/11.jpg" alt="Pic9" />
         </div>
-       
+
     </div>
 
     <script src="script.js"></script>
