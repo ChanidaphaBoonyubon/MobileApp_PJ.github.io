@@ -9,76 +9,75 @@
 </head>
 
 <body>
-   <div class="circle-wrapper">
-    <svg viewBox="0 0 400 400" class="circle-svg">
-        <defs>
-  <clipPath id="clip1">
-    <path d="M200,200 L200,20 A180,180 0 0,1 380,200 Z"/>
-  </clipPath>
+    <div class="circle-wrapper">
+        <svg viewBox="0 0 400 400" class="circle-svg">
+            <defs>
+                <clipPath id="clip1">
+                    <path d="M200,200 L200,20 A180,180 0 0,1 380,200 Z" />
+                </clipPath>
 
-  <clipPath id="clip2">
-    <path d="M200,200 L380,200 A180,180 0 0,1 200,380 Z"/>
-  </clipPath>
+                <clipPath id="clip2">
+                    <path d="M200,200 L380,200 A180,180 0 0,1 200,380 Z" />
+                </clipPath>
 
-  <clipPath id="clip3">
-    <path d="M200,200 L200,380 A180,180 0 0,1 20,200 Z"/>
-  </clipPath>
+                <clipPath id="clip3">
+                    <path d="M200,200 L200,380 A180,180 0 0,1 20,200 Z" />
+                </clipPath>
 
-  <clipPath id="clip4">
-    <path d="M200,200 L20,200 A180,180 0 0,1 200,20 Z"/>
-  </clipPath>
-</defs>
-    <g class="line">
-    <line x1="200" y1="20" x2="200" y2="380" /> 
-    <line x1="20" y1="200" x2="380" y2="200" /> 
-    </g>
-    <g class="slice slice4" clip-path="url(#clip4)">
-      <path d="M200,200 L20,200 A180,180 0 0,1 200,20 Z"/>
-      <text x="130" y="110" class="label">กิจกรรมโดดเด่น</text>
-      <text x="130" y="140" class="desc">
-        <tspan x="130" dy="0">กิจกรรมพิเศษตลอดทั้งปี เช่น </tspan>
-        <tspan x="130" dy="18">ค่ายมัธยมและเวิร์กช็อปเพื่อพัฒนาทักษะ</tspan>
-        <tspan x="130" dy="18">ในด้าน IoT และนวัตกรรม</tspan>
-      </text>
-    </g>
-    
-    <g class="slice slice1" clip-path="url(#clip1)">
-      <path d="M200,200 L200,20 A180,180 0 0,1 380,200 Z"/>
-      <text x="270" y="110" class="label">อาจารย์ผู้เชี่ยวชาญ</text>
-      <text x="270" y="140" class="desc">
-        <tspan x="270" dy="0">หลากหลายสาขา</tspan>
-        <tspan x="270" dy="18">พร้อมด้วยงานวิจัยระดับแนวหน้า</tspan>
-        <tspan x="270" dy="18">ที่ได้รับการยอมรับ</tspan>
-      </text>
-    </g>
-  
-    <g class="slice slice3" clip-path="url(#clip3)">
-      <path d="M200,200 L200,380 A180,180 0 0,1 20,200 Z"/>
-      <text x="130" y="280" class="label">โอกาสที่ไม่มีสิ้นสุด</text>
-      <text x="130" y="310" class="desc">
-        <tspan x="130" dy="0">สร้างโอกาสใหม่ ๆ ผ่านเครือข่ายของเรา</tspan>
-        <tspan x="140" dy="18">ทั้งในด้านการศึกษา การวิจัยและ</tspan>
-        <tspan x="140" dy="18">การฝึกงานในอุตสาหกรรมจริง</tspan>
-      </text>
-    </g>
-    
-    <g class="slice slice2" clip-path="url(#clip2)">
-      <path d="M200,200 L380,200 A180,180 0 0,1 200,380 Z"/>
-      <text x="270" y="280" class="label">โครงการเด่น</text>
-      <text x="270" y="310" class="desc">
-        <tspan x="270" dy="0">ร่วมเป็นส่วนหนึ่งใน โครงการที่ขับเคลื่อน</tspan>
-        <tspan x="270" dy="18">นวัตกรรม เช่น ระบบอัจฉริยะสำหรับ</tspan>
-        <tspan x="260" dy="18">การเกษตรและ Smart City</tspan>
-      </text>
-    </g>
+                <clipPath id="clip4">
+                    <path d="M200,200 L20,200 A180,180 0 0,1 200,20 Z" />
+                </clipPath>
+            </defs>
+            <g class="line">
+                <line x1="200" y1="20" x2="200" y2="380" />
+                <line x1="20" y1="200" x2="380" y2="200" />
+            </g>
+            <g class="slice slice4" clip-path="url(#clip4)">
+                <path d="M200,200 L20,200 A180,180 0 0,1 200,20 Z" />
+                <text x="130" y="110" class="label">กิจกรรมโดดเด่น</text>
+                <text x="130" y="140" class="desc">
+                    <tspan x="130" dy="0">กิจกรรมพิเศษตลอดทั้งปี เช่น </tspan>
+                    <tspan x="130" dy="18">ค่ายมัธยมและเวิร์กช็อปเพื่อพัฒนาทักษะ</tspan>
+                    <tspan x="130" dy="18">ในด้าน IoT และนวัตกรรม</tspan>
+                </text>
+            </g>
 
-  </svg>
+            <g class="slice slice1" clip-path="url(#clip1)">
+                <path d="M200,200 L200,20 A180,180 0 0,1 380,200 Z" />
+                <text x="270" y="110" class="label">อาจารย์ผู้เชี่ยวชาญ</text>
+                <text x="270" y="140" class="desc">
+                    <tspan x="270" dy="0">หลากหลายสาขา</tspan>
+                    <tspan x="270" dy="18">พร้อมด้วยงานวิจัยระดับแนวหน้า</tspan>
+                    <tspan x="270" dy="18">ที่ได้รับการยอมรับ</tspan>
+                </text>
+            </g>
 
-  <div class="center-box">
-    The Secret<br>of Success
-  </div>
-</div>
-</div>
+            <g class="slice slice3" clip-path="url(#clip3)">
+                <path d="M200,200 L200,380 A180,180 0 0,1 20,200 Z" />
+                <text x="130" y="280" class="label">โอกาสที่ไม่มีสิ้นสุด</text>
+                <text x="130" y="310" class="desc">
+                    <tspan x="130" dy="0">สร้างโอกาสใหม่ ๆ ผ่านเครือข่ายของเรา</tspan>
+                    <tspan x="140" dy="18">ทั้งในด้านการศึกษา การวิจัยและ</tspan>
+                    <tspan x="140" dy="18">การฝึกงานในอุตสาหกรรมจริง</tspan>
+                </text>
+            </g>
+
+            <g class="slice slice2" clip-path="url(#clip2)">
+                <path d="M200,200 L380,200 A180,180 0 0,1 200,380 Z" />
+                <text x="270" y="280" class="label">โครงการเด่น</text>
+                <text x="270" y="310" class="desc">
+                    <tspan x="270" dy="0">ร่วมเป็นส่วนหนึ่งใน โครงการที่ขับเคลื่อน</tspan>
+                    <tspan x="270" dy="18">นวัตกรรม เช่น ระบบอัจฉริยะสำหรับ</tspan>
+                    <tspan x="260" dy="18">การเกษตรและ Smart City</tspan>
+                </text>
+            </g>
+
+        </svg>
+
+        <div class="center-box">
+            The Secret<br>of Success
+        </div>
+    </div>
     <div class="projects-grid">
 
         <div class="project-interactive-container">
