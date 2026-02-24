@@ -1,3 +1,10 @@
+document.querySelectorAll(".slice").forEach(slice => {
+  slice.addEventListener("click", function() {
+    document.querySelectorAll(".slice").forEach(s => s.classList.remove("active"));
+    this.classList.add("active");
+    document.querySelector(".center-box").style.opacity = 0;
+  });
+});
 // ฟังก์ชันเปิดร่างขยาย
 function openExpanded(btn) {
     // หากล่องโปรเจกต์ตัวที่โดนกด

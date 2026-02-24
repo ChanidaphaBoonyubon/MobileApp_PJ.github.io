@@ -14,22 +14,18 @@
  }
 
 /* Circle */
-.center-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #78C0E6;
-  padding: 20px 30px;
-  border-radius: 16px;
-  font-weight: bold;
-  text-align: center;
+.line{
+    stroke : #161942;
 }
-
-.circle-wrapper {
-  position: relative;
-  width: 400px;
-  height: 400px;
+.circle-wrapper{
+  width:90vw;
+  max-width:600px;
+  aspect-ratio:1/1;
+  margin:80px auto;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .circle-svg {
@@ -38,38 +34,61 @@
 }
 
 .slice path {
-  fill: #e6d89b;
+  fill: #f5e7b2;
   transition: 0.3s ease;
 }
 
-.slice .desc {
-  opacity: 0;
-  font-size: 13px;
+.slice {
   transition: 0.3s ease;
+  transform-origin: center;
+  cursor: pointer;
 }
 
-.slice:hover path {
-  fill: #f0b84f;
-  transform: scale(1.05);
-  transform-origin: 200px 200px;
-}
-
-.slice:hover .desc {
-  opacity: 1;
-}
-
-.label {
-  font-weight: bold;
-  font-size: 14px;
-  fill: #000;
-}
-.circle-wrapper:hover .center-box {
+/* Hover Desktop */
+@media (hover: hover) {
+  .slice:hover path { fill: #f0b84f; }
+  .slice:hover .desc { opacity: 1; }
+  .slice:hover { transform: scale(1.05); }
+  .circle-wrapper:hover .center-box {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* Mobile Tap Active */
+.slice.active path { fill: #f0b84f; }
+.slice.active .desc { opacity: 1; }
+.slice.active { transform: scale(1.05); }
+
+.label {
+  text-anchor: middle;
+  font-weight: bold;
+  font-size: 14px;
+  pointer-events: none;
+  border-width: 3px;
+  border-color: #78C0E6;
+}
+
+.desc {
+  text-anchor: middle;
+  font-size: 10px;
+  opacity: 0;
+  transition: 0.3s ease;
+  pointer-events: none;
+  
 }
 
 .center-box {
-    transition: 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #78C0E6;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
  /*PJCard*/
