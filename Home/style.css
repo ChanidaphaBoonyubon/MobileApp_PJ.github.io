@@ -26,8 +26,12 @@
   display:flex;
   justify-content:center;
   align-items:center;
+  transform: translateX(-20px);
 }
-
+.circle-svg text{
+  fill:#184274;
+  paint-order:stroke;
+}
 .circle-svg {
   width: 100%;
   height: 100%;
@@ -44,7 +48,6 @@
   cursor: pointer;
 }
 
-/* Hover Desktop */
 @media (hover: hover) {
   .slice:hover path { fill: #f0b84f; }
   .slice:hover .desc { opacity: 1; }
@@ -55,7 +58,6 @@
   }
 }
 
-/* Mobile Tap Active */
 .slice.active path { fill: #f0b84f; }
 .slice.active .desc { opacity: 1; }
 .slice.active { transform: scale(1.05); }
