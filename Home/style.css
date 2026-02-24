@@ -63,7 +63,14 @@
   font-size: 14px;
   fill: #000;
 }
+.circle-wrapper:hover .center-box {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+}
 
+.center-box {
+    transition: 0.3s ease;
+}
 
  /*PJCard*/
  .project-interactive-container {
