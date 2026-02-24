@@ -9,16 +9,68 @@
 </head>
 
 <body>
-    <div class="circle-wrapper">
-        
-        <div class="circle">
-            <div class="center-box">The Secret<br>of Success</div>
-            <div class="label top-right">กิจกรรมโดดเด่น</div>
-            <div class="label top-left">อาจารย์ผู้เชี่ยวชาญ</div>
-            <div class="label bottom-left">โอกาสที่ไม่มีที่สิ้นสุด</div>
-            <div class="label bottom-right">โครงการเด่น</div>
-        </div>
-    </div>
+   <div class="circle-wrapper">
+
+<svg viewBox="0 0 400 400" class="circle-svg">
+      <!-- กลุ่มที่ 1 -->
+  <g class="slice slice4">
+    <path d="M200,200 L20,200 A180,180 0 0,1 200,20 Z" />
+    <text class="label" x="70" y="110">กิจกรรมโดดเด่น</text>
+    <text class="desc" x="90" y="160">
+      <tspan x="60" dy="0">กิจกรรมพิเศษตลอดทั้งปี เช่น </tspan>
+      <tspan x="60" dy="18">ค่ายมัธยมและเวิร์กช็อปเพื่อพัฒนาทักษะใน</tspan>
+      <tspan x="60" dy="18">ด้าน IoT และนวัตกรรม</tspan>
+    </text>
+  </g>      
+  
+   <!-- กลุ่มที่ 2 -->
+  <g class="slice slice1">
+    <path d="M200,200 L200,20 A180,180 0 0,1 380,200 Z" />
+    <text class="label" x="285" y="110">อาจารย์ผู้เชี่ยวชาญ</text>
+    <text class="desc" x="240" y="160">
+      <tspan x="240" dy="0">หลากหลายสาขา</tspan>
+      <tspan x="240" dy="18">พร้อมด้วยงานวิจัยระดับแนวหน้าที่ได้รับ</tspan>
+      <tspan x="240" dy="18">การยอมรับ</tspan>
+    </text>
+  </g>
+
+  
+
+  <!-- กลุ่มที่ 3 -->        
+  <g class="slice slice3"> 
+    <path d="M200,200 L200,380 A180,180 0 0,1 20,200 Z" />
+    <text class="label" x="70" y="300">โอกาสที่ไม่มีสิ้นสุด</text>
+    <text class="desc" x="90" y="250">
+      <tspan x="80" dy="0">สร้างโอกาสใหม่ ๆ ผ่านเครือข่ายของเรา</tspan>
+      <tspan x="40" dy="18">ทั้งในด้านการศึกษา การวิจัย และการฝึกงานใน</tspan>
+      <tspan x="80" dy="18">อุตสาหกรรมจริง</tspan>
+    </text>
+  </g>
+<!-- กลุ่มที่ 4 -->
+  <g class="slice slice2">
+    <path d="M200,200 L380,200 A180,180 0 0,1 200,380 Z" />
+    <text class="label" x="285" y="300">โครงการเด่น</text>
+    <text class="desc" x="240" y="250">
+      <tspan x="240" dy="0">โครงการจริง</tspan>
+      <tspan x="240" dy="18">ทำงานจริง</tspan>
+    </text>
+  </g>
+
+
+
+
+
+  <!-- เส้นแบ่ง -->
+  <line x1="200" y1="20" x2="200" y2="380" stroke="#161942" stroke-width="4"/>
+  <line x1="20" y1="200" x2="380" y2="200" stroke="#161942" stroke-width="4"/>
+
+</svg>
+
+<div class="center-box">
+  The Secret<br>of Success
+</div>
+
+</div>
     <div class="projects-grid">
 
         <div class="project-interactive-container">
