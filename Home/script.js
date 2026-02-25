@@ -1,46 +1,59 @@
-// ================= SLIDER =================
-
+// ประชาสัมพันธ์
 const slider = document.querySelector('.info-slider');
 const track = document.querySelector('.slider-track');
 const slides = document.querySelectorAll('.slide');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
-let currentIndex = 0;
+let currentIndex = 1;
 let autoSlide;
+let isTransitioning = false;
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
 
-// ---------- UPDATE ----------
+track.appendChild(firstClone);
+track.insertBefore(lastClone, slides[0]);
+
+const allSlides = document.querySelectorAll('.slide');
+
+track.style.transform = `translateX(-100%)`;
+
 function updateSlide() {
+    track.style.transition = "transform 0.5s ease";
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// ---------- NEXT ----------
 nextBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
     currentIndex++;
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
     updateSlide();
     resetAutoSlide();
 });
 
-// ---------- PREV ----------
 prevBtn.addEventListener('click', () => {
+    if (isTransitioning) return;
     currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-    }
     updateSlide();
     resetAutoSlide();
 });
 
-// ---------- AUTO ----------
+track.addEventListener('transitionend', () => {
+    if (allSlides[currentIndex].isEqualNode(firstClone)) {
+        track.style.transition = "none";
+        currentIndex = 1;
+        track.style.transform = `translateX(-100%)`;
+    }
+
+    if (allSlides[currentIndex].isEqualNode(lastClone)) {
+        track.style.transition = "none";
+        currentIndex = slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+});
+
 function startAutoSlide() {
     autoSlide = setInterval(() => {
         currentIndex++;
-        if (currentIndex >= slides.length) {
-            currentIndex = 0;
-        }
         updateSlide();
     }, 5000);
 }
@@ -52,24 +65,19 @@ function resetAutoSlide() {
 
 startAutoSlide();
 
-// ---------- SWIPE MOBILE ----------
 let startX = 0;
-let endX = 0;
 
 slider.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
 });
 
 slider.addEventListener('touchend', e => {
-    endX = e.changedTouches[0].clientX;
+    let endX = e.changedTouches[0].clientX;
 
     if (startX - endX > 50) {
         currentIndex++;
-        if (currentIndex >= slides.length) currentIndex = 0;
-    } 
-    else if (endX - startX > 50) {
+    } else if (endX - startX > 50) {
         currentIndex--;
-        if (currentIndex < 0) currentIndex = slides.length - 1;
     }
 
     updateSlide();
@@ -78,11 +86,11 @@ slider.addEventListener('touchend', e => {
 
 // วงกลม
 document.querySelectorAll(".slice").forEach(slice => {
-  slice.addEventListener("click", function() {
-    document.querySelectorAll(".slice").forEach(s => s.classList.remove("active"));
-    this.classList.add("active");
-    document.querySelector(".center-box").style.opacity = 0;
-  });
+    slice.addEventListener("click", function () {
+        document.querySelectorAll(".slice").forEach(s => s.classList.remove("active"));
+        this.classList.add("active");
+        document.querySelector(".center-box").style.opacity = 0;
+    });
 });
 
 // การ์ดโปรเจก
