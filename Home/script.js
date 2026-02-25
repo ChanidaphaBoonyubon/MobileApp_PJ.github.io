@@ -66,6 +66,7 @@ slider.addEventListener('touchend', e => {
     updateSlide();
     resetAutoSlide();
 });
+
 // วงกลม
 document.querySelectorAll(".slice").forEach(slice => {
     slice.addEventListener("click", function () {
