@@ -1,3 +1,81 @@
+// ================= SLIDER =================
+
+const slider = document.querySelector('.info-slider');
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let currentIndex = 0;
+let autoSlide;
+
+// ---------- UPDATE ----------
+function updateSlide() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// ---------- NEXT ----------
+nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+    updateSlide();
+    resetAutoSlide();
+});
+
+// ---------- PREV ----------
+prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+    updateSlide();
+    resetAutoSlide();
+});
+
+// ---------- AUTO ----------
+function startAutoSlide() {
+    autoSlide = setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        updateSlide();
+    }, 5000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+}
+
+startAutoSlide();
+
+// ---------- SWIPE MOBILE ----------
+let startX = 0;
+let endX = 0;
+
+slider.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', e => {
+    endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) {
+        currentIndex++;
+        if (currentIndex >= slides.length) currentIndex = 0;
+    } 
+    else if (endX - startX > 50) {
+        currentIndex--;
+        if (currentIndex < 0) currentIndex = slides.length - 1;
+    }
+
+    updateSlide();
+    resetAutoSlide();
+});
+
 // วงกลม
 document.querySelectorAll(".slice").forEach(slice => {
   slice.addEventListener("click", function() {
