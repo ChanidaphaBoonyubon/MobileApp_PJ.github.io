@@ -1,89 +1,71 @@
 // ประชาสัมพันธ์
 const slider = document.querySelector('.info-slider');
 const track = document.querySelector('.slider-track');
-const slides = document.querySelectorAll('.slide');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
-
+let slides = document.querySelectorAll('.slide');
 let currentIndex = 1;
 let autoSlide;
-let isTransitioning = false;
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
-
 track.appendChild(firstClone);
 track.insertBefore(lastClone, slides[0]);
-
-const allSlides = document.querySelectorAll('.slide');
-
-track.style.transform = `translateX(-100%)`;
-
+slides = document.querySelectorAll('.slide');
+track.style.transform = `translateX(-${currentIndex * 100}%)`;
 function updateSlide() {
     track.style.transition = "transform 0.5s ease";
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-
 nextBtn.addEventListener('click', () => {
-    if (isTransitioning) return;
+    if (currentIndex >= slides.length - 1) return;
     currentIndex++;
     updateSlide();
     resetAutoSlide();
 });
-
 prevBtn.addEventListener('click', () => {
-    if (isTransitioning) return;
+    if (currentIndex <= 0) return;
     currentIndex--;
     updateSlide();
     resetAutoSlide();
 });
-
 track.addEventListener('transitionend', () => {
-    if (allSlides[currentIndex].isEqualNode(firstClone)) {
+    if (slides[currentIndex].isEqualNode(firstClone)) {
         track.style.transition = "none";
         currentIndex = 1;
-        track.style.transform = `translateX(-100%)`;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-
-    if (allSlides[currentIndex].isEqualNode(lastClone)) {
+    if (slides[currentIndex].isEqualNode(lastClone)) {
         track.style.transition = "none";
-        currentIndex = slides.length;
+        currentIndex = slides.length - 2;
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 });
-
 function startAutoSlide() {
     autoSlide = setInterval(() => {
+        if (currentIndex >= slides.length - 1) return;
         currentIndex++;
         updateSlide();
     }, 5000);
 }
-
 function resetAutoSlide() {
     clearInterval(autoSlide);
     startAutoSlide();
 }
-
 startAutoSlide();
-
 let startX = 0;
-
 slider.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
 });
-
 slider.addEventListener('touchend', e => {
     let endX = e.changedTouches[0].clientX;
-
-    if (startX - endX > 50) {
+    if (startX - endX > 50 && currentIndex < slides.length - 1) {
         currentIndex++;
-    } else if (endX - startX > 50) {
+    } else if (endX - startX > 50 && currentIndex > 0) {
         currentIndex--;
     }
-
     updateSlide();
     resetAutoSlide();
 });
-
 // วงกลม
 document.querySelectorAll(".slice").forEach(slice => {
     slice.addEventListener("click", function () {
