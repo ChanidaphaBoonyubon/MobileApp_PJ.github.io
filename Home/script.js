@@ -1,3 +1,54 @@
+ // =========================
+  // Top tabbar + indicator
+  // =========================
+  const topTabs = document.querySelectorAll(".tab-link");
+  const indicator = document.querySelector(".indicator");
+
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  function moveIndicator(element) {
+    if (!indicator || !element) return;
+
+    const rect = element.getBoundingClientRect();
+    const containerRect = element.parentElement.getBoundingClientRect();
+
+    indicator.style.width = rect.width + "px";
+    indicator.style.left = (rect.left - containerRect.left) + "px";
+  }
+
+  topTabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      topTabs.forEach((t) => t.classList.remove("active"));
+      this.classList.add("active");
+      moveIndicator(this);
+
+      // ปิดเมนูมือถืออัตโนมัติเมื่อเลือกเมนู
+      if (menu) menu.classList.remove("active");
+      if (hamburger) hamburger.classList.remove("active");
+    });
+  });
+
+  window.addEventListener("load", () => {
+    moveIndicator(document.querySelector(".tab-link.active"));
+    if (menu) menu.classList.remove("active");
+    if (hamburger) hamburger.classList.remove("active");
+  });
+
+  window.addEventListener("resize", () => {
+    moveIndicator(document.querySelector(".tab-link.active"));
+  });
+
+  // =========================
+  // Hamburger (mobile)
+  // =========================
+  if (hamburger && menu) {
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    });
+  }
+  
 // Information
 const slider = document.querySelector('.info-slider');
 const track = document.querySelector('.slider-track');
