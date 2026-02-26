@@ -48,7 +48,7 @@
       hamburger.classList.toggle("active");
     });
   }
-  
+
 // Information
 const slider = document.querySelector('.info-slider');
 const track = document.querySelector('.slider-track');
@@ -141,6 +141,21 @@ function closeExpanded(btn) {
     container.querySelector('.expanded-view').classList.add('hidden');
     container.querySelector('.compact-view').classList.remove('hidden');
 
-    let defaultTabBtn = container.querySelector('.left-tab');
-    switchTab(defaultTabBtn, 1);
+    let defaultTabBtn = container.querySelector('.expanded-view .left-tab');
+switchTab(defaultTabBtn, 1);
+}
+function switchTab(btn, tabNumber) {
+    let container = btn.closest('.project-interactive-container');
+    let expanded = container.querySelector('.expanded-view');
+
+    let tabs = expanded.querySelectorAll('.tab-content');
+    let buttons = expanded.querySelectorAll('.side-tab-btn');
+
+    tabs.forEach(tab => tab.style.display = "none");
+
+    buttons.forEach(b => b.classList.remove("active"));
+
+    expanded.querySelector('.tab-' + tabNumber).style.display = "block";
+
+    btn.classList.add("active");
 }
