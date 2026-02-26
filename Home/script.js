@@ -1,4 +1,4 @@
-// ประชาสัมพันธ์
+// Information
 const slider = document.querySelector('.info-slider');
 const track = document.querySelector('.slider-track');
 const nextBtn = document.querySelector('.next');
@@ -67,7 +67,7 @@ slider.addEventListener('touchend', e => {
     resetAutoSlide();
 });
 
-// วงกลม
+// circle
 document.querySelectorAll(".slice").forEach(slice => {
     slice.addEventListener("click", function () {
         document.querySelectorAll(".slice").forEach(s => s.classList.remove("active"));
@@ -76,7 +76,7 @@ document.querySelectorAll(".slice").forEach(slice => {
     });
 });
 
-// การ์ดโปรเจก
+// PJ Card
 function openExpanded(btn) {
     let container = btn.closest('.project-interactive-container');
 
