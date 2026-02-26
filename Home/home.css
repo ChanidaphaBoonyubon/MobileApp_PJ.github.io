@@ -1,10 +1,10 @@
  @font-face {
      font-family: 'THK2D';
-     src: url('/asset/Font/TH K2D July8.ttf')format('truetype');
+     src: url('../asset/Font/TH K2D July8.ttf')format('truetype');
  }
 @font-face {
   font-family: 'Kodchasan';
-  src: url('/asset/Font/TH Kodchasal Bold .ttf') format('truetype');
+  src: url('../asset/Font/TH Kodchasal Bold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -12,7 +12,6 @@
  body {
      background-color: #161942;
      font-family: "THK2D", sans-serif;
-     min-height: 100vh;
      display: flex;
     flex-direction: column;
  }
