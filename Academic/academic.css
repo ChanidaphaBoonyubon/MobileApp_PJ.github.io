@@ -138,7 +138,7 @@ body{
 
 .footer-inner{
     display: flex;
-    justify-content: space-between; /*left-right*/
+    justify-content: space-between; 
     align-items: flex-start;
     flex-wrap: wrap;
     background-color: #040518;
@@ -156,13 +156,13 @@ body{
 
 
 .footer-contact p{
-    margin: 6px 0; /*ระยะห่างบรรทัด*/
-    line-height: 1.6; /*ค.สูงบรรทัด*/
+    margin: 6px 0; 
+    line-height: 1.6;
 }
 
 .footer-address p{
-    margin: 6px 0; /*ระยะห่างบรรทัด*/
-    line-height: 1.6; /*ค.สูงบรรทัด*/
+    margin: 6px 0; 
+    line-height: 1.6;
 }
 
 .footer .social{
@@ -200,7 +200,7 @@ body{
   }
 
   #menu{
-    position: absolute; /*อยู่ตามสั่ง top right บลาๆ*/
+    position: absolute;
     top: 65px;
     right: 0;
     width: 150px;
