@@ -1,20 +1,23 @@
-@font-face {
-    font-family: 'TH K2D';
-    src: url('../asset/Font/TH K2D July8.ttf') format('truetype');
-    font-style: normal;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+@font-face {
+     font-family: 'THK2D';
+     src: url('../asset/Font/TH K2D July8.ttf')format('truetype');
+ }
 @font-face {
   font-family: 'Kodchasan';
   src: url('../asset/Font/TH Kodchasal Bold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
-* {
-    font-family: 'TH K2D';
-}
- body {
+body{
+  margin:0;
      background-color: #161942;
- }
+}
+
 /* tab-bar */
 .logo{ margin: 0; }
 
@@ -127,106 +130,10 @@
 }
 
 
-nav {
-    display: flex;
-    align-items: flex-end; 
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-nav li {
-    margin-left: 0px;
-    flex: 1;
-    text-align: center;
-}
-
-nav li a {
-    text-decoration: none;
-    color: #002d62;
-    font-weight: normal;
-}
-.Iot1 {
-    background-color: #78C0E6; 
-    border-radius: 30px 30px 0 0;
-    padding: 15px 10px;
-    z-index: 2; 
-    position: relative;
-    width: 40%;
-}
-
-.Iot1 a {
-    color: #161942;
-    font-size: 24px;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); 
-}
-
-.Iot2 {
-    background-color: #184274;
-    border-radius: 20px 20px 0 0;
-    padding: 15px 30px;
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2);
-    width: 20%;
-}
-
-.Iot2 a {
-    color: #e8ebcd; 
-    font-size: 18px;
-}
-
-.faculty-section {
-    background: linear-gradient(180deg, #78C0E6 0%, #D8EAF5 100%); 
-    padding: 60px 20px;
-    margin-top: 0px;
-}
-
-.faculty-grid {
-    display: flex;
-    flex-wrap: wrap;          
-    justify-content: center;  
-    gap: 50px 30px;           
-    max-width: 1000px;  
-    margin: 0 auto;
-}
-
-.faculty-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex: 1 1 250px;          
-    max-width: 300px; 
-}
-
-.faculty-card img {
-    width: 150px;
-    height: 190px;
-    object-fit: cover; 
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15); 
-    margin-bottom: 15px;
-}
-
-.faculty-name {
-    font-size: 20px;
-    color: #1a1e36;
-    margin: 0 0 5px 0;
-    font-weight: bold;
-}
-
-.faculty-role {
-    font-size: 18px;
-    color: #4a4a4a;
-    margin: 0;
-    line-height: 1.4;
-}
 /* footer */
 .footer{
     font-family: 'THK2D', sans-serif;
     margin-top: auto;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
 }
 
 .footer-inner{
@@ -238,6 +145,7 @@ nav li a {
     color: #F3E6A2;
     gap: 10px;
     padding: 40px;
+  
 }
 
 .footer-logo-img{

@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 @font-face {
      font-family: 'THK2D';
      src: url('../asset/Font/TH K2D July8.ttf')format('truetype');
@@ -14,6 +19,7 @@
      font-family: "THK2D", sans-serif;
      display: flex;
     flex-direction: column;
+    margin:0;
  }
 
 /* tab-bar */
@@ -127,6 +133,58 @@
   transition: all 0.4s ease;
 }
 
+
+/* footer */
+.footer{
+    font-family: 'THK2D', sans-serif;
+    margin-top: auto;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between; /*left-right*/
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #040518;
+    color: #F3E6A2;
+    gap: 10px;
+    padding: 40px;
+  
+}
+
+.footer-logo-img{
+    width: 200px;
+    height: auto;
+    margin: 0;
+}
+
+
+.footer-contact p{
+    margin: 6px 0; /*ระยะห่างบรรทัด*/
+    line-height: 1.6; /*ค.สูงบรรทัด*/
+}
+
+.footer-address p{
+    margin: 6px 0; /*ระยะห่างบรรทัด*/
+    line-height: 1.6; /*ค.สูงบรรทัด*/
+}
+
+.footer .social{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.footer-bottom{
+    display: flex;
+    color: #040518;
+    background-color: #F3E6A2;
+    justify-content: center;
+    padding: 12px 16px;
+    text-align: center;
+    width: 100%;
+}
  /* header */
  .main-header {
      position: relative;
@@ -850,62 +908,7 @@ img {
  .item9 {
      animation-delay: calc(var(--animation-duration) / var(--total-items) * (var(--total-items) - 9) * -1);
  }
-
-/* footer */
-.footer{
-    font-family: 'THK2D', sans-serif;
-    margin-top: auto;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-}
-
-.footer-inner{
-    display: flex;
-    justify-content: space-between; /*left-right*/
-    align-items: flex-start;
-    flex-wrap: wrap;
-    background-color: #040518;
-    color: #F3E6A2;
-    gap: 10px;
-    padding: 40px;
-}
-
-.footer-logo-img{
-    width: 200px;
-    height: auto;
-    margin: 0;
-}
-
-
-.footer-contact p{
-    margin: 6px 0; /*ระยะห่างบรรทัด*/
-    line-height: 1.6; /*ค.สูงบรรทัด*/
-}
-
-.footer-address p{
-    margin: 6px 0; /*ระยะห่างบรรทัด*/
-    line-height: 1.6; /*ค.สูงบรรทัด*/
-}
-
-.footer .social{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-}
-
-.footer-bottom{
-    display: flex;
-    color: #040518;
-    background-color: #F3E6A2;
-    justify-content: center;
-    padding: 12px 16px;
-    text-align: center;
-    width: 100%;
-}
-
-
- @media (max-width: 768px){
+@media (max-width: 768px){
   .indicator{ display: none; }
 
   .hamburger{
