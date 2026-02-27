@@ -280,7 +280,7 @@
  /* Course */
  .courses {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 40px;
     max-width: 1200px;
     margin: 60px auto; 
@@ -364,7 +364,25 @@
  .arrow-btn:hover {
      transform: translate(-5px);
  }
+@media (min-width: 576px) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
+/* จอกลาง */
+@media (min-width: 992px) {
+  .courses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* จอใหญ่ */
+@media (min-width: 1200px) {
+  .courses {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
  /* Information */
  * {
      box-sizing: border-box;
@@ -810,13 +828,39 @@ box-shadow:
      max-width: 1400px;
      margin: 60px auto;
      padding: 0 20px;
-
      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
      align-items: stretch;
-
  }
+.expanded-view {
+  grid-column: 1 / -1;
+}
+/* จอใหญ่ */
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
+/* จอกลาง */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* จอแท็บเล็ต */
+@media (min-width: 576px) and (max-width: 991px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* มือถือ */
+@media (max-width: 575px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
  /* Scrollpic */
  :root {
      --total-items: 9;
