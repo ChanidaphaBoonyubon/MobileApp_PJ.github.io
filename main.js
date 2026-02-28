@@ -108,9 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const contactTab = Array.from(document.querySelectorAll('.bch-tab[role="tab"]'));
-  const contactPanel = Array.from(
-  document.querySelectorAll('.contact-panel[role="tabpanel"], .bch-panel[role="tabpanel"]')
-);
+  const contactPanel = Array.from(document.querySelectorAll('[role = "tabpanel"]'));
 
   function resetContactTab() {
     // close the tab not click
