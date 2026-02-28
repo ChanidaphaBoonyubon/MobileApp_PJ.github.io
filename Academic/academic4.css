@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'THK2D', sans-serif;
 }
 @font-face {
      font-family: 'THK2D';
@@ -312,4 +313,105 @@ body{
   .project-header .proj-notop-icon{
     width: 22px;
   }
+}
+.choose ul {
+    display: flex;
+    align-items: flex-end; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.choose li {
+    margin-left: 0px;
+    flex: 1;
+    text-align: center;
+}
+
+.choose li a {
+    text-decoration: none;
+    color: #002d62;
+    font-weight: normal;
+}
+
+.poTopoEggAC {
+    background-color: #78C0E6; 
+    border-radius: 30px 30px 0 0;
+    border-right: 2px solid #161942;
+    padding: 15px 10px;
+    z-index: 2;
+    position: relative;
+    width: 40%;
+}
+
+.choose .poTopoEggAC a {
+    color: #161942;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.Iot1AC, .Iot2AC, .continuousAC {
+    background-color: #184274;
+    border-radius: 20px 20px 0 0;
+    padding: 15px 30px;
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 20%;
+}
+
+.choose .Iot1AC a, .choose .Iot2AC a, .choose .continuousAC a {
+    color: #e8ebcd;
+    font-size: 18px;
+}
+
+h1 {
+    background-color: #78C0E6;
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0px;
+    transition: padding 0.4s ease; /* ทำให้การขยายดูนุ่มนวล */
+
+}
+้
+้h1:hover {
+    padding: 60px 30px;
+}
+
+.NameEngAC {
+    font-size: 30px;
+    font-weight: normal;
+    height: 0;
+    opacity: 0;
+    display: block;           /* ให้ขึ้นบรรทัดใหม่ */
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+    padding: 0px 30px;
+}
+h1:hover .NameEngAC {
+    opacity: 1; 
+    height: auto;               /* กลับมาเข้มปกติ */
+    visibility: visible;       /* ทำให้มองเห็นและโต้ตอบได้ */
+    transform: translateY(0);  /* เลื่อนกลับมาตำแหน่งเดิม */
+    margin-top: 10px;
+}
+
+
+
+.blue1 {
+    background-color: #78C0E6;
+    padding: 70px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid #161942 ;
+    border-bottom: solid #161942;
+    border-width: 10px;
+}
+.book {
+    width: 50px;
 }
