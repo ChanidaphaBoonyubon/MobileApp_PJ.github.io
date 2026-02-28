@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'THK2D';
 }
 @font-face {
      font-family: 'THK2D';
@@ -312,4 +313,131 @@ body{
   .project-header .proj-notop-icon{
     width: 22px;
   }
+}
+
+.choose {
+    display: flex;
+    align-items: flex-end; /* ให้ทุกแท็บแนบชิดติดเส้นขอบด้านล่าง */
+    list-style: none; /* เอาจุดหน้า li ออก */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.choose li {
+    margin-left: 0px;
+    flex: 1;
+    text-align: center;
+}
+
+.choose li a {
+    text-decoration: none;
+    color: #002d62;
+    font-weight: normal;
+}
+.continuous {
+    background-color: #78C0E6; 
+    border-radius: 30px 30px 0 0;
+    border-right: 2px solid #161942;
+    padding: 25px 50px;
+    z-index: 2; /* ให้อยู่ด้านบนสุด */
+    position: relative;
+    width: 40%;
+}
+
+.choose .continuous a {
+    color: #161942;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* เงาบางๆ ให้ตัวอักษรดูมีมิติ */
+}
+
+.Iot1, .Iot2, .poTopoEgg {
+    background-color: #184274;
+    border-radius: 20px 20px 0 0;
+    padding: 15px 0px;
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 20%;
+}
+
+.choose .Iot1 a, .choose .Iot2 a,.choose .poTopoEgg a {
+    color: #e8ebcd; /* สีตัวอักษรออกเหลือง/ครีมอ่อนๆ */
+    font-size: 18px;
+}
+
+h1 {
+    background-color: #78C0E6;
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+    font-size: 60px;
+    font-weight: normal;
+    margin: 0px;
+    transition: padding 0.4s ease; /* ทำให้การขยายดูนุ่มนวล */
+
+}
+้
+้h1:hover {
+    padding: 60px 30px;
+}
+
+.NameEng {
+    font-size: 30px;
+    font-weight: normal;
+    height: 0;
+    opacity: 0;
+    display: block;           /* ให้ขึ้นบรรทัดใหม่ */
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+    padding: 0px 30px;
+}
+h1:hover .NameEng {
+    opacity: 1; 
+    height: auto;               /* กลับมาเข้มปกติ */
+    visibility: visible;       /* ทำให้มองเห็นและโต้ตอบได้ */
+    transform: translateY(0);  /* เลื่อนกลับมาตำแหน่งเดิม */
+    margin-top: 10px;
+}
+
+.WhatIsIoT {
+    padding: 10px 10% ;
+    line-height: 1.8;
+    background-color: white;
+    text-align: left;
+    font-size: 25px;
+}
+
+.money {
+    background-color: #161942; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.money1 { font-size: 25px; }
+.money2 { font-size: 75px; font-weight: normal; color: #fff; }
+.money3 { font-size: 25px; }
+
+.gallery {
+    background-color: #F3E6A2; /* พื้นหลังสีเหลืองนวลตามรูป */
+    padding: 50px 20%;
+}
+
+.imgList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.imgList div img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 30px; /* ขอบมนโค้งตามรูป */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: block;
 }
