@@ -400,16 +400,21 @@ h1:hover .NameEngAC {
     margin-top: 10px;
 }
 
-
-
 .blue1 {
+    background-color: #78C0E6;
+    padding: 70px 30px;
+    display: flex;
+    border-bottom:solid #161942;
+    justify-content: center;
+    align-items: center;
+    border-width: 10px;
+}
+.blue2 {
     background-color: #78C0E6;
     padding: 70px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid #161942 ;
-    border-bottom: solid #161942;
     border-width: 10px;
 }
 .book {
