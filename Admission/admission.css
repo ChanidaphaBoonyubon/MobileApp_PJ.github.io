@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'K2D';
-  src: url('/asset/Font/TH K2D July8.ttf') format('truetype');
+  src: url('../asset/Font/TH K2D July8.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
