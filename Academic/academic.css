@@ -415,7 +415,8 @@ h1:hover .NameEngAC {
     align-items: center;    /* ให้จุดกับตัวหนังสืออยู่กึ่งกลางบรรทัดเดียวกัน */
     font-size: 18px;
     font-weight: 600;
-    color: #444;
+    color: #ffffff;
+    font-weight: normal;
 }
 
 /* สร้างจุดวงกลมจำลองด้วย ::before */
@@ -469,11 +470,14 @@ h1:hover .NameEngAC {
     margin-top: 25px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
     gap: 50px;
 }
 
 .semester-box {
+    
     border: 1px solid #B2DBF0;
     border-radius: 15px;
     padding: 20px 15px;
@@ -484,11 +488,11 @@ h1:hover .NameEngAC {
 }
 
 .semester-title {
-    color: #070000;
+    color: #ffffff;
     font-size: 25px;
     margin-top: 0;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .subject-list {
