@@ -623,7 +623,9 @@ h1:hover .NameEngAC {
 
 .resources-explain {
   font-size: 20px;
+  text-align: center;
 }
+
 
 .click-resources {
   align-self: center;
