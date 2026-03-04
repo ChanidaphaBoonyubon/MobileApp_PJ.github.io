@@ -149,3 +149,13 @@ function toggleSemester(subjectId, btnId) {
         btn.textContent = 'CLOSE';
     }
 }
+
+function showTableOnly() {
+    // เพิ่ม class 'viewing-table' ไปที่ body
+    document.body.classList.add('viewing-table');
+}
+
+function goBack() {
+    document.body.classList.remove('viewing-table');
+    document.getElementById('target-table-container').style.display = 'none';
+}
