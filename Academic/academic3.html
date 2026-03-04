@@ -48,7 +48,7 @@
         </nav>
     </header>
 
-<nav class="choose">
+    <nav class="choose">
         <ul>
             <li class="Iot1AC"><a href="../Academic/academic.html">วิศวกรรมไอโอทีและสารสนเทศ</a></li>
             <li class="Iot2AC"><a href="../Academic/academic2.html">2 ปริญญา</a></li>
@@ -57,10 +57,48 @@
         </ul>
     </nav>
 
- <h1>
+    <h1>
         วิศวกรรมคอมพิวเตอร์และไอโอที<br>
         <span class="NameEngAC">B.Eng. Computer Engineering and IoT </span>
     </h1>
+    <div class="resources">
+        <div class="resources-explain">ดาวน์โหลดไฟล์เอกสารสำหรับนักศึกษา</div>
+        <div class="click-resources" onclick="showTableOnly()">Click</div>
+    </div>
+    <div class="table-container" id="target-table">
+        <button class="btn-back" onclick="goBack()">Close</button>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>เอกสารทั่วไป</td>
+                    <td>คำร้องขอรับใบปริญญาบัตร</td>
+                    <td><a href="../asset/pdf/Receiving a degree certificate form.pdf" class="btn-download">Download</a></td>
+                </tr>
+                <tr>
+                    <td>เอกสารทั่วไป</td>
+                    <td>คำร้องขอลาพักการศึกษา</td>
+                    <td><a href="../asset/pdf/pagkarnrian.pdf" class="btn-download">Download</a></td>
+                </tr>
+                <tr>
+                    <td>เอกสารทั่วไป</td>
+                    <td>หนังสือรับรองของอาจารย์ที่ปรึกษา</td>
+                    <td><a href="../asset/pdf/7.pdf" class="btn-download">Download</a></td>
+                </tr>
+                <tr>
+                    <td>เอกสารทั่วไป</td>
+                    <td>ใบลาออก</td>
+                    <td><a href="../asset/pdf/resign 8.pdf" class="btn-download">Download</a></td>
+                </tr>           
+            </tbody>
+        </table>
+    </div>
     <section>
         <div class="explain">
             <ul class="explain-list">
@@ -470,7 +508,7 @@
                 <h2 class="semester-title">Semester 2</h2>
 
                 <div class="subject-list" id="y3-sem2-subjects">
-                   <div class="subject-item bg-yellow">
+                    <div class="subject-item bg-yellow">
                         <div class="dots">&#8942;</div>
                         <div class="subject-info">
                             <div class="subject-name">PROJECT 1 (3)</div>
@@ -538,7 +576,8 @@
         <div class="foot-container">
             <div class="footer-inner">
                 <div class="footer-logo">
-                    <a href="../Home/home.html"> <img src="../asset/logo.png" alt="footer-logo" class="footer-logo-img"></a>
+                    <a href="../Home/home.html"> <img src="../asset/logo.png" alt="footer-logo"
+                            class="footer-logo-img"></a>
                 </div>
 
                 <section class="footer-contact">
@@ -576,7 +615,7 @@
         </div>
     </footer>
 
-        <script src="../Academic/academic3.js"></script>
+    <script src="../Academic/academic3.js"></script>
 </body>
 
 </html>
