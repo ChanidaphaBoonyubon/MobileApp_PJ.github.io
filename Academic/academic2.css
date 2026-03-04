@@ -540,6 +540,8 @@ h1:hover .NameEngAC {
 }
 
 .action-btn {
+    align-self: center;
+    justify-self: center;
     background-color: #e0e0e0;
     border: none;
     border-radius: 15px;
@@ -552,3 +554,125 @@ h1:hover .NameEngAC {
 }
 
 .semesterP4 { align-self: center; }
+
+/*------------resources----------------------------*/
+
+.resources {
+  justify-content: center;
+  align-items: center;
+  background-color: #F3E5AB;
+  display: flex;
+  padding: 15px 30px;
+  margin: 0px 150px;
+  gap: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.resources-explain {
+  font-size: 20px;
+}
+
+.click-resources {
+  align-self: center;
+  background: linear-gradient(to bottom, #2b327b, #12153a);
+  /* ไล่เฉดสีน้ำเงินเข้ม */
+  color: white;
+  padding: 5px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+/* คอนเทนเนอร์คุมระยะห่าง */
+.table-container {
+  display: none;
+  padding: 0px 45px;
+  justify-content: flex-end;
+}
+
+
+/* ตั้งค่าตัวตาราง */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #3D5E85;
+  color: white;
+  font-family: 'Sarabun', sans-serif;
+  border: 2px solid #5fb6df;
+}
+
+/* หัวตาราง */
+.custom-table th {
+  padding: 15px;
+  border: 1px solid #5fb6df;
+  /* เส้นขอบระหว่างเซลล์ */
+  font-weight: normal;
+  font-size: 20px;
+  color: #e0f2fe;
+}
+
+/* เนื้อหาตาราง */
+.custom-table td {
+  padding: 12px 15px;
+  text-align: center;
+  /* จัดตัวอักษรให้อยู่กลาง */
+  border: 1px solid #5fb6df;
+  background-color: #040518;
+  font-size: 18px;
+}
+
+/* ตกแต่งปุ่ม Download */
+.btn-download {
+  display: inline-block;
+  text-decoration: none;
+  color: #e0f2fe;
+  border: 2px solid #5fb6df;
+  padding: 4px 20px;
+  background-color: #2b327b;
+  border-radius: 20px;
+
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ปุ่ม */
+.btn-download:hover {
+  background-color: #F3E6A2;
+  color: #1e3a8a;
+}
+
+/* เพิ่ม :not(.topbar) เข้าไป เพื่อบอกว่า ห้ามซ่อน class topbar ด้วยนะ */
+body.viewing-table > *:not(.topbar):not(#target-table) {
+    display: none !important;
+}
+
+/* ส่วนแสดงผลตาราง (ถ้ามีอยู่แล้วให้คงไว้ครับ) */
+body.viewing-table #target-table {
+    display: block !important;
+    /* อาจจะเพิ่ม margin-top นิดหน่อยเผื่อไม่ให้ตารางชิด Top bar เกินไป */
+    margin-top: 80px; 
+}
+
+.btn-back {
+    display: block; 
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #5fb6df;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-back:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
