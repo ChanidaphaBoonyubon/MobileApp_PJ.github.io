@@ -608,6 +608,8 @@ h1:hover .NameEngAC {
 /*------------resources----------------------------*/
 
 .resources {
+  width: fit-content;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #F3E5AB;
