@@ -1,33 +1,38 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'THK2D', sans-serif;
+  font-family: 'THK2D', sans-serif
 }
+
 @font-face {
-     font-family: 'THK2D';
-     src: url('../asset/Font/TH K2D July8.ttf')format('truetype');
- }
+  font-family: 'THK2D';
+  src: url('../asset/Font/TH K2D July8.ttf')format('truetype');
+}
+
 @font-face {
   font-family: 'Kodchasan';
   src: url('../asset/Font/TH Kodchasal Bold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
-body{
-  margin:0;
-     background-color: #161942;
+
+body {
+  margin: 0;
+  background-color: #161942;
 }
 
 /* tab-bar */
-.logo{ margin: 0; }
+.logo {
+  margin: 0;
+}
 
-.logodeptabbar{
+.logodeptabbar {
   width: 200px;
   height: auto;
 }
 
-.topbar{
+.topbar {
   display: flex;
   position: relative;
   align-items: center;
@@ -35,18 +40,18 @@ body{
   padding: 10px;
 }
 
-.indicator{
+.indicator {
   position: absolute;
   top: 10px;
   left: 10px;
   width: 80px;
   height: 40px;
   border-radius: 30px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2,1),width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
-.tab-container{
+.tab-container {
   position: relative;
   display: flex;
   width: fit-content;
@@ -58,7 +63,7 @@ body{
   z-index: 999;
 }
 
-.tab-link{
+.tab-link {
   font-family: 'Kodchasan', sans-serif;
   position: relative;
   z-index: 1;
@@ -66,19 +71,19 @@ body{
   display: flex;
   align-items: center;
   color: #184274;
-  padding: 10px 15px ;
+  padding: 10px 15px;
   border-radius: 30px;
   transition: all 0.4s ease;
   opacity: 0.6;
 }
 
-.tab-link .icon{
+.tab-link .icon {
   width: 20px;
   height: 20px;
   display: block;
 }
 
-.tab-link .label{
+.tab-link .label {
   max-width: 0;
   overflow: hidden;
   opacity: 0;
@@ -88,41 +93,49 @@ body{
   margin-left: 0;
 }
 
-.tab-link.active{
+.tab-link.active {
   color: #184274;
   background-color: #78C0E6;
   opacity: 1;
   animation: pop 0.3s ease;
 }
 
-@keyframes pop{
-  0%{ transform: scale(0.9); }
-  50%{ transform: scale(1.05); }
-  100%{ transform: scale(1); }
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 
-.tab-link:hover{
+
+.tab-link:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.tab-link.active .label{
+.tab-link.active .label {
   display: inline-block;
   max-width: 150px;
   opacity: 1;
   margin-left: 10px;
 }
 
-.hamburger{
+.hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 6px;
 }
 
-.hamburger span{
+.hamburger span {
   width: 40px;
   height: 4px;
   background-color: #F3E6A2;
@@ -132,76 +145,78 @@ body{
 
 
 /* footer */
-.footer{
-    font-family: 'THK2D', sans-serif;
-    margin-top: auto;
+.footer {
+  font-family: 'THK2D', sans-serif;
+  margin-top: auto;
 }
 
-.footer-inner{
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;
-    flex-wrap: wrap;
-    background-color: #040518;
-    color: #F3E6A2;
-    gap: 10px;
-    padding: 40px;
-  
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #040518;
+  color: #F3E6A2;
+  gap: 10px;
+  padding: 40px;
+
 }
 
-.footer-logo-img{
-    width: 200px;
-    height: auto;
-    margin: 0;
-}
-
-
-.footer-contact p{
-    margin: 6px 0; 
-    line-height: 1.6; 
-}
-
-.footer-address p{
-    margin: 6px 0; 
-    line-height: 1.6; 
-}
-
-.footer .social{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-}
-
-.footer-bottom{
-    display: flex;
-    color: #040518;
-    background-color: #F3E6A2;
-    justify-content: center;
-    padding: 12px 16px;
-    text-align: center;
-    width: 100%;
+.footer-logo-img {
+  width: 200px;
+  height: auto;
+  margin: 0;
 }
 
 
- @media (max-width: 768px){
-  .indicator{ display: none; }
+.footer-contact p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
 
-  .hamburger{
+.footer-address p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.footer .social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.footer-bottom {
+  display: flex;
+  color: #040518;
+  background-color: #F3E6A2;
+  justify-content: center;
+  padding: 12px 16px;
+  text-align: center;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .indicator {
+    display: none;
+  }
+
+  .hamburger {
     display: flex;
   }
 
-  .hamburger span{
+  .hamburger span {
     background-color: #F3E6A2;
   }
 
-  .topbar{
+  .topbar {
     position: relative;
     z-index: 3000;
   }
 
-  #menu{
-    position: absolute; 
+  #menu {
+    position: absolute;
     top: 65px;
     right: 0;
     width: 150px;
@@ -216,7 +231,7 @@ body{
     transition: transform .35s ease, opacity .35s ease;
   }
 
-  #menu .tab-link{
+  #menu .tab-link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -228,8 +243,8 @@ body{
     width: 125px;
     justify-content: flex-start;
   }
-  
-  #menu .tab-link .label{
+
+  #menu .tab-link .label {
     display: inline !important;
     color: inherit !important;
     opacity: 1 !important;
@@ -242,7 +257,7 @@ body{
     margin-left: 0 !important;
   }
 
-    #menu .tab-link.active{
+  #menu .tab-link.active {
     width: 125px;
     color: #184274;
     background-color: #78C0E6;
@@ -250,7 +265,7 @@ body{
     animation: pop 0.3s ease;
   }
 
-  .tab-container{
+  .tab-container {
     position: absolute;
     top: 65px;
     height: fit-content;
@@ -273,7 +288,7 @@ body{
   }
 
 
-  .tab-container.active{
+  .tab-container.active {
     transform: translateX(0);
     right: 0px;
     pointer-events: auto;
@@ -283,268 +298,435 @@ body{
   }
 
   /* footer */
-  .footer-logo{
+  .footer-logo {
     width: 160px;
     margin-left: 0;
   }
-  .footer-row{
+
+  .footer-row {
     flex-direction: column;
     gap: 20px;
   }
 
-  .footer-col,.footer-contact,.footer-address{
+  .footer-col,
+  .footer-contact,
+  .footer-address {
     flex: none;
-    width: 100%; 
+    width: 100%;
+    /*ให้เต็ม*/
   }
 
-  .footer .social{
-    flex-direction: row; 
+  .footer .social {
+    flex-direction: row;
+    /*เรียงแนวนอน*/
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
   }
 
-  .project-header{
+  .project-header {
     font-size: 18px;
     padding: 14px 16px;
     gap: 12px;
   }
 
-  .project-header .proj-notop-icon{
+  .project-header .proj-notop-icon {
     width: 22px;
   }
 }
 
 .choose ul {
-    display: flex;
-    align-items: flex-end; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .choose li {
-    margin-left: 0px;
-    flex: 1;
-    text-align: center;
+  margin-left: 0px;
+  flex: 1;
+  text-align: center;
 }
 
 .choose li a {
-    text-decoration: none;
-    color: #002d62;
-    font-weight: normal;
+  text-decoration: none;
+  color: #002d62;
+  font-weight: normal;
 }
 
-.Iot2AC {
-    background-color: #78C0E6; 
-    border-radius: 30px 30px 0 0;
-    border-right: 2px solid #161942;
-    padding: 15px 10px;
-    z-index: 2;
-    position: relative;
-    width: 40%;
+.Iot1AC {
+  background-color: #78C0E6;
+  border-radius: 30px 30px 0 0;
+  border-right: 2px solid #161942;
+  padding: 15px 10px;
+  z-index: 2;
+  position: relative;
+  width: 40%;
 }
 
-.choose .Iot2AC a {
-    color: #161942;
-    font-size: 24px;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+.choose .Iot1AC a {
+  color: #161942;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
-.Iot1AC, .continuousAC, .poTopoEggAC {
-    background-color: #184274;
-    border-radius: 20px 20px 0 0;
-    padding: 15px 30px;
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2);
-    width: 20%;
+.Iot2AC,
+.continuousAC,
+.poTopoEggAC {
+  background-color: #184274;
+  border-radius: 20px 20px 0 0;
+  padding: 15px 30px;
+  box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.2);
+  width: 20%;
 }
 
-.choose .Iot1AC a,.choose .continuousAC a,.choose .poTopoEggAC a {
-    color: #e8ebcd;
-    font-size: 18px;
+.choose .Iot2AC a,
+.choose .continuousAC a,
+.choose .poTopoEggAC a {
+  color: #e8ebcd;
+  font-size: 18px;
 }
 
 h1 {
-    background-color: #78C0E6;
-    color: white;
-    text-align: center;
-    padding: 40px 30px;
-    font-size: 60px;
-    font-weight: normal;
-    margin: 0px;
-    transition: padding 0.4s ease; /* ทำให้การขยายดูนุ่มนวล */
+  background-color: #78C0E6;
+  color: white;
+  text-align: center;
+  padding: 40px 30px;
+  font-size: 60px;
+  font-weight: normal;
+  margin: 0px;
+  transition: padding 0.4s ease;
+  /* ทำให้การขยายดูนุ่มนวล */
 
 }
-้
-้h1:hover {
-    padding: 60px 30px;
+
+
+h1:hover {
+  padding: 60px 30px;
 }
 
 .NameEngAC {
-    font-size: 30px;
-    font-weight: normal;
-    height: 0;
-    opacity: 0;
-    display: block;           /* ให้ขึ้นบรรทัดใหม่ */
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.8s ease;
-    padding: 0px 30px;
+  font-size: 30px;
+  font-weight: normal;
+  height: 0;
+  opacity: 0;
+  display: block;
+  /* ให้ขึ้นบรรทัดใหม่ */
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.8s ease;
+  padding: 0px 30px;
 }
+
 h1:hover .NameEngAC {
-    opacity: 1; 
-    height: auto;               /* กลับมาเข้มปกติ */
-    visibility: visible;       /* ทำให้มองเห็นและโต้ตอบได้ */
-    transform: translateY(0);  /* เลื่อนกลับมาตำแหน่งเดิม */
-    margin-top: 10px;
+  opacity: 1;
+  height: auto;
+  /* กลับมาเข้มปกติ */
+  visibility: visible;
+  /* ทำให้มองเห็นและโต้ตอบได้ */
+  transform: translateY(0);
+  /* เลื่อนกลับมาตำแหน่งเดิม */
+  margin-top: 10px;
 }
 
 .explain-list {
-    display: flex;
-    flex-wrap: wrap;        /* รองรับมือถือ ถ้าที่แคบจะตัดขึ้นบรรทัดใหม่ */
-    justify-content: center; /* จัดให้อยู่กึ่งกลางหน้าจอ */
-    gap: 40px;              /* ระยะห่างระหว่างแต่ละวิชา */
-    list-style: none;       /* เอาจุดเดิมของ HTML ออก */
-    padding: 0;
-    margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* รองรับมือถือ ถ้าที่แคบจะตัดขึ้นบรรทัดใหม่ */
+  justify-content: center;
+  /* จัดให้อยู่กึ่งกลางหน้าจอ */
+  gap: 40px;
+  /* ระยะห่างระหว่างแต่ละวิชา */
+  list-style: none;
+  /* เอาจุดเดิมของ HTML ออก */
+  padding: 0;
+  margin: 30px 0;
 }
 
 .explain-list li {
-    display: flex;
-    align-items: center;    /* ให้จุดกับตัวหนังสืออยู่กึ่งกลางบรรทัดเดียวกัน */
-    font-size: 18px;
-    font-weight: 600;
-    color: #444;
+  display: flex;
+  align-items: center;
+  /* ให้จุดกับตัวหนังสืออยู่กึ่งกลางบรรทัดเดียวกัน */
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  font-weight: normal;
 }
 
 /* สร้างจุดวงกลมจำลองด้วย ::before */
 .explain-list li::before {
-    content: "";
-    width: 14px;            /* ความกว้างของจุด */
-    height: 14px;           /* ความสูงของจุด */
-    border-radius: 50%;     /* ทำให้เป็นวงกลมเป๊ะ */
-    margin-right: 15px;     /* <<< ระยะห่างระหว่างจุดกับตัวหนังสือ */
-    display: inline-block;
+  content: "";
+  width: 14px;
+  /* ความกว้างของจุด */
+  height: 14px;
+  /* ความสูงของจุด */
+  border-radius: 50%;
+  /* ทำให้เป็นวงกลมเป๊ะ */
+  margin-right: 15px;
+  /* <<< ระยะห่างระหว่างจุดกับตัวหนังสือ */
+  display: inline-block;
 }
 
 .ex1::before {
-    background-color: #f7bd59; 
+  background-color: #f7bd59;
 }
 
 .ex2::before {
-    background-color: #83c1e3; /* สีฟ้าสำหรับวิชาบังคับ */
+  background-color: #83c1e3;
+  /* สีฟ้าสำหรับวิชาบังคับ */
 }
 
 .ex3::before {
-    background-color: #f08cb6; /* สีเขียวสำหรับศึกษาทั่วไป */
+  background-color: #f08cb6;
+  /* สีเขียวสำหรับศึกษาทั่วไป */
 }
 
 .curriculum-container {
-    border: 2px solid #63a9d8;
-    border-radius: 25px;
-    padding: 40px 30px 30px 30px;
-    position: relative;
-    width: 85%; 
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 50px;
+  border: 2px solid #63a9d8;
+  border-radius: 25px;
+  padding: 40px 30px 30px 30px;
+  position: relative;
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .year-badge {
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, #63a9d8 0%, #3e8ebf 100%);
-    color: #1a1e36;
-    padding: 10px 40px;
-    border-radius: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #63a9d8 0%, #3e8ebf 100%);
+  color: #1a1e36;
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .semesters-wrapper {
-    margin-top: 25px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .semester-box {
-    border: 1px solid #B2DBF0;
-    border-radius: 15px;
-    padding: 20px 15px;
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  border: 1px solid #B2DBF0;
+  border-radius: 15px;
+  padding: 20px 15px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .semester-title {
-    color: #070000;
-    font-size: 25px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: bold;
+  color: #ffffff;
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .subject-list {
-    display: none; /* ซ่อนไว้ก่อน */
-    width: 100%;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 20px;
+  display: none;
+  /* ซ่อนไว้ก่อน */
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .subject-item {
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 8px 10px;
-    color: #1a1e36;
-    font-size: 12px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 10px;
+  color: #1a1e36;
+  font-size: 12px;
+  font-weight: bold;
 }
 
-.bg-yellow { background-color: #f7bd59; }
-.bg-blue   { background-color: #83c1e3; }
-.bg-pink   { background-color: #f08cb6; }
+.bg-yellow {
+  background-color: #f7bd59;
+}
+
+.bg-blue {
+  background-color: #83c1e3;
+}
+
+.bg-pink {
+  background-color: #f08cb6;
+}
 
 .dots {
-    font-size: 50px;
-    margin-right: 0px;
-    letter-spacing: 10px;
+  font-size: 50px;
+  margin-right: 0px;
+  letter-spacing: 10px;
 }
 
 .subject-info {
-    font-size: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-size: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .divider {
-    border: none;
-    border-bottom: 1px solid #1a1e36;
-    width: 90%;
-    margin: 4px 0;
+  border: none;
+  border-bottom: 1px solid #1a1e36;
+  width: 90%;
+  margin: 4px 0;
 }
 
 .action-btn {
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 15px;
-    padding: 8px 20px;
-    color: #1a1e36;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: inset 0px -2px 5px rgba(0,0,0,0.2);
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 20px;
+  color: #1a1e36;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.semesterP4 { align-self: center; }
+.semesterP4 {
+  align-self: center;
+}
+
+/*------------resources----------------------------*/
+
+.resources {
+  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3E5AB;
+  display: flex;
+  padding: 15px 30px;
+  margin: 0px 150px;
+  gap: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.resources-explain {
+  font-size: 20px;
+  text-align: center;
+}
+
+.click-resources {
+  align-self: center;
+  background: linear-gradient(to bottom, #2b327b, #12153a);
+  /* ไล่เฉดสีน้ำเงินเข้ม */
+  color: white;
+  padding: 5px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+/* คอนเทนเนอร์คุมระยะห่าง */
+.table-container {
+  display: none;
+  padding: 0px 45px;
+  justify-content: flex-end;
+}
+
+
+/* ตั้งค่าตัวตาราง */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #3D5E85;
+  color: white;
+  font-family: 'Sarabun', sans-serif;
+  border: 2px solid #5fb6df;
+}
+
+/* หัวตาราง */
+.custom-table th {
+  padding: 15px;
+  border: 1px solid #5fb6df;
+  /* เส้นขอบระหว่างเซลล์ */
+  font-weight: normal;
+  font-size: 20px;
+  color: #e0f2fe;
+}
+
+/* เนื้อหาตาราง */
+.custom-table td {
+  padding: 12px 15px;
+  text-align: center;
+  /* จัดตัวอักษรให้อยู่กลาง */
+  border: 1px solid #5fb6df;
+  background-color: #040518;
+  font-size: 18px;
+}
+
+/* ตกแต่งปุ่ม Download */
+.btn-download {
+  display: inline-block;
+  text-decoration: none;
+  color: #e0f2fe;
+  border: 2px solid #5fb6df;
+  padding: 4px 20px;
+  background-color: #2b327b;
+  border-radius: 20px;
+
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ปุ่ม */
+.btn-download:hover {
+  background-color: #F3E6A2;
+  color: #1e3a8a;
+}
+
+/* เพิ่ม :not(.topbar) เข้าไป เพื่อบอกว่า ห้ามซ่อน class topbar ด้วยนะ */
+body.viewing-table > *:not(.topbar):not(#target-table) {
+    display: none !important;
+}
+
+/* ส่วนแสดงผลตาราง (ถ้ามีอยู่แล้วให้คงไว้ครับ) */
+body.viewing-table #target-table {
+    display: block !important;
+    /* อาจจะเพิ่ม margin-top นิดหน่อยเผื่อไม่ให้ตารางชิด Top bar เกินไป */
+    margin-top: 80px; 
+}
+
+.btn-back {
+    display: block; 
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #5fb6df;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-back:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
