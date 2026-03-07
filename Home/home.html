@@ -3,12 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT and Information Engineering, KMITLL</title>
     <link rel="stylesheet" href="../Home/home.css">
+    <link rel="stylesheet" href="../asset/darkmode-variables.css">
+    <link rel="stylesheet" href="../asset/darkmode-toggle.css">
+    <link rel="stylesheet" href="../Home/home.css">
+    <link rel="stylesheet" href="../asset/responsive.css">
 </head>
 
 <body>
+    <div id="google_translate_element" style="display:none"></div>
+
+    <div class="lang-toggle-container">
+        <button class="lang-btn active notranslate" onclick="switchLang('th', this)">TH</button>
+        <button class="lang-btn notranslate" onclick="switchLang('en', this)">EN</button>
+    </div>
+    <div class="mode-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider">
+                <span class="star">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </span>
+        </label>
+    </div>
     <header class="topbar">
         <div class="logo">
             <a href="../Home/home.html"> <img src="../asset/logo.png" alt="logodeptabbar" class="logodeptabbar"></a>
@@ -23,33 +42,33 @@
         <nav class="tab-container" id="menu">
             <a href="../Home/home.html" class="tab-link active">
                 <img src="../asset/Icon/Home.svg" alt="home-icon" class="icon">
-                <span class="label">Home</span>
+                <span class="label notranslate">Home</span>
             </a>
             <a href="../About/about.html" class="tab-link">
                 <img src="../asset/Icon/About.svg" alt="about-icon" class="icon">
-                <span class="label">About</span>
+                <span class="label notranslate">About</span>
             </a>
             <a href="../Academic/academic.html" class="tab-link">
                 <img src="../asset/Icon/Academic.svg" alt="academic-icon" class="icon">
-                <span class="label">Academic</span>
+                <span class="label notranslate">Academic</span>
             </a>
             <a href="../Admission/admission.html" class="tab-link ">
                 <img src="../asset/Icon/Admission.svg" alt="admission-icon" class="icon">
-                <span class="label">Admission</span>
+                <span class="label notranslate">Admission</span>
             </a>
             <a href="../Faculty/faculty.html" class="tab-link">
                 <img src="../asset/Icon/Faculty.svg" alt="faculty-icon" class="icon">
-                <span class="label">Faculty</span>
+                <span class="label notranslate">Faculty</span>
             </a>
             <a href="../Contact/contact.html" class="tab-link ">
                 <img src="../asset/Icon/Contact.svg" alt="contact-icon" class="icon">
-                <span class="label">Contact</span>
+                <span class="label notranslate ">Contact</span>
             </a>
         </nav>
     </header>
     <header class="main-header">
         <div class="header-top">
-            <div class="social">
+            <div class="social social-header">
                 <a href="https://maps.app.goo.gl/efjHmhd8aasFdXoQ8"><img src="../asset/Icon/Location.svg"
                         alt="location"></a>
                 <a href="https://www.facebook.com/IOTE.KMITL"><img src="../asset/Icon/Face.svg" alt="facebook"></a>
@@ -58,14 +77,14 @@
             </div>
 
             <div class="kmitl">
-                <span class="short">KMITL</span>
-                <span class="full">King Mongkut's Institute of Technology Ladkrabang</span>
+                <span class="short notranslate">KMITL</span>
+                <span class="full notranslate">King Mongkut's Institute of Technology Ladkrabang</span>
             </div>
         </div>
 
         <div class="header-content">
-            <h1>IoT and Information Engineering</h1>
-            <p>วิศวกรรมไอโอทีและสารสนเทศ</p>
+            <h1 class="notranslate">IoT and Information Engineering</h1>
+            <p class="notranslate">วิศวกรรมไอโอทีและสารสนเทศ</p>
         </div>
     </header>
     <div class="courses">
@@ -174,41 +193,72 @@
             </g>
             <g class="slice slice4" clip-path="url(#clip4)">
                 <path d="M200,200 L20,200 A180,180 0 0,1 200,20 Z" />
-                <text x="130" y="110" class="label">กิจกรรมโดดเด่น</text>
+                <text x="130" y="110" class="label" data-th="กิจกรรมโดดเด่น"
+                    data-en="Outstanding Activities">กิจกรรมโดดเด่น
+                </text>
                 <text x="130" y="140" class="desc">
-                    <tspan x="130" dy="0">กิจกรรมพิเศษตลอดทั้งปี เช่น </tspan>
-                    <tspan x="130" dy="18">ค่ายมัธยมและเวิร์กช็อปเพื่อพัฒนาทักษะ</tspan>
-                    <tspan x="130" dy="18">ในด้าน IoT และนวัตกรรม</tspan>
+                    <tspan x="130" dy="0" data-th="กิจกรรมพิเศษตลอดทั้งปี เช่น"
+                        data-en="Special activities all year e.g.">กิจกรรมพิเศษตลอดทั้งปี เช่น</tspan>
+                    </tspan>
+                    <tspan x="130" dy="18" data-th="ค่ายมัธยมและเวิร์กช็อปเพื่อพัฒนาทักษะ"
+                        data-en="high school camps and workshops to">ค่ายมัธยมและเวิร์กช็อปเพื่อพัฒนาทักษะในด้าน</tspan>
+                    </tspan>
+                    <tspan x="130" dy="18" data-th="ในด้าน IoT และนวัตกรรม"
+                        data-en="develop skills in IoT and innovation.">IoT และนวัตกรรม</tspan>
+                    </tspan>
                 </text>
             </g>
 
             <g class="slice slice1" clip-path="url(#clip1)">
                 <path d="M200,200 L200,20 A180,180 0 0,1 380,200 Z" />
-                <text x="270" y="110" class="label">อาจารย์ผู้เชี่ยวชาญ</text>
+                <text x="270" y="110" class="label" data-th="อาจาร์ยผู้เขี่ยวชาญ"
+                    data-en="Expert Faculty">อาจารย์ผู้เชี่ยวชาญ
+                </text>
                 <text x="270" y="140" class="desc">
-                    <tspan x="270" dy="0">หลากหลายสาขา</tspan>
-                    <tspan x="270" dy="18">พร้อมด้วยงานวิจัยระดับแนวหน้า</tspan>
-                    <tspan x="270" dy="18">ที่ได้รับการยอมรับ</tspan>
+                    <tspan x="270" dy="0" data-th="หลากหลายสาขา" data-en="Expertise across diverse fields">หลากหลายสาขา
+                    </tspan>
+                    <tspan x="270" dy="18" data-th="พร้อมด้วยงานวิจัยระดับแนวหน้า"
+                        data-en="with nationally and internationally">พร้อมด้วยงานวิจัยระดับแนวหน้า
+                    </tspan>
+                    <tspan x="270" dy="18" data-th="ที่ได้รับการยอมรับ" data-en="recognized pioneering research.">
+                        พร้อมด้วยงานวิจัยระดับแนวหน้า
+                    </tspan>
                 </text>
             </g>
 
             <g class="slice slice3" clip-path="url(#clip3)">
                 <path d="M200,200 L200,380 A180,180 0 0,1 20,200 Z" />
-                <text x="130" y="280" class="label">โอกาสที่ไม่มีสิ้นสุด</text>
+                <text x="130" y="280" class="label" data-th="โอกาสที่ไม่มีสิ้นสุด"
+                    data-en="Endless Opportunities">โอกาสที่ไม่มีสิ้นสุด
+
+                </text>
                 <text x="130" y="310" class="desc">
-                    <tspan x="130" dy="0">สร้างโอกาสใหม่ ๆ ผ่านเครือข่ายของเรา</tspan>
-                    <tspan x="140" dy="18">ทั้งในด้านการศึกษา การวิจัยและ</tspan>
-                    <tspan x="140" dy="18">การฝึกงานในอุตสาหกรรมจริง</tspan>
+                    <tspan x="130" dy="0" data-th="สร้างโอกาสใหม่ ๆ ผ่านเครือข่ายของเรา"
+                        data-en="Forging new opportunities through">สร้างโอกาสใหม่ ๆ ผ่านเครือข่ายของเรา
+                    </tspan>
+                    <tspan x="140" dy="18" data-th="ทั้งในด้านการศึกษา การวิจัยและ"
+                        data-en="our network in education, research,">ทั้งในด้านการศึกษา การวิจัยและ
+                    </tspan>
+                    <tspan x="140" dy="18" data-th="การฝึกงานในอุตสาหกรรมจริง" data-en="and industrial internships.">
+                        การฝึกงานในอุตสาหกรรมจริง
+                    </tspan>
                 </text>
             </g>
 
             <g class="slice slice2" clip-path="url(#clip2)">
                 <path d="M200,200 L380,200 A180,180 0 0,1 200,380 Z" />
-                <text x="270" y="280" class="label">โครงการเด่น</text>
+                <text x="270" y="280" class="label" data-th="โครงการเด่น" data-en="Outstanding Projects">โครงการเด่น
+                </text>
                 <text x="270" y="310" class="desc">
-                    <tspan x="270" dy="0">ร่วมเป็นส่วนหนึ่งใน โครงการที่ขับเคลื่อน</tspan>
-                    <tspan x="270" dy="18">นวัตกรรม เช่น ระบบอัจฉริยะสำหรับ</tspan>
-                    <tspan x="260" dy="18">การเกษตรและ Smart City</tspan>
+                    <tspan x="270" dy="0" data-th="ร่วมเป็นส่วนหนึ่งใน โครงการที่ขับเคลื่อน"
+                        data-en="Participate in innovation-driven projects">ร่วมเป็นส่วนหนึ่งใน โครงการที่ขับเคลื่อน
+                    </tspan>
+                    <tspan x="270" dy="18" data-th="นวัตกรรม เช่น ระบบอัจฉริยะสำหรับ"
+                        data-en="such as intelligent systems for">นวัตกรรม เช่น ระบบอัจฉริยะสำหรับ
+                    </tspan>
+                    <tspan x="260" dy="18" data-th="การเกษตรและ Smart City" data-en="agriculture and Smart City">
+                        การเกษตรและ Smart City
+                    </tspan>
                 </text>
             </g>
 
@@ -398,11 +448,12 @@
         </div>
 
     </div>
-        <footer class="footer">
+    <footer class="footer">
         <div class="foot-container">
             <div class="footer-inner">
                 <div class="footer-logo">
-                    <a href="../Home/home.html"> <img src="../asset/logo.png" alt="footer-logo" class="footer-logo-img"></a>
+                    <a href="../Home/home.html"> <img src="../asset/logo.png" alt="footer-logo"
+                            class="footer-logo-img"></a>
                 </div>
 
                 <section class="footer-contact">
@@ -420,7 +471,7 @@
                     <p>เลขที่ 1 ซอยฉลองกรุง 1 แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพมหานคร 10520</p>
                 </section>
 
-                <nav class="social">
+                <nav class="social social-footer">
                     <a href="https://web.facebook.com/IOTE.KMITL" target="_blank">
                         <img src="../asset/Icon/Group 76.svg" alt="Facebook">
                     </a>
@@ -440,6 +491,10 @@
         </div>
     </footer>
     <script src="../Home/home.js"></script>
+    <script src="../asset/darkmode.js"></script>
+
+    <script src="../asset/js/translate.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

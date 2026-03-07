@@ -17,13 +17,13 @@
 }
 
 body {
-    background-color: #161942;
+    background-color: var(--bg-body);
     font-family: "THK2D", sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0;
+    padding-top: 50px;
 }
-
 /* tab-bar */
 .logo {
     margin: 0;
@@ -40,6 +40,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    background-color: var(--bg-home);
 }
 
 .indicator {
@@ -96,7 +97,7 @@ body {
 }
 
 .tab-link.active {
-    color: #184274;
+    color: #184274 ;
     background-color: #78C0E6;
     opacity: 1;
     animation: pop 0.3s ease;
@@ -128,6 +129,7 @@ body {
     max-width: 150px;
     opacity: 1;
     margin-left: 10px;
+    color: #184274;
 }
 
 .hamburger {
@@ -157,13 +159,11 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color: #040518;
+    background-color: var(--color-footer1);
     color: #F3E6A2;
     gap: 10px;
     padding: 40px;
-
 }
-
 .footer-logo-img {
     width: 200px;
     height: auto;
@@ -198,7 +198,6 @@ body {
     width: 100%;
 }
 
-/* header */
 .main-header {
     position: relative;
     width: 100%;
@@ -223,6 +222,8 @@ body {
     height: 30px;
     object-fit: contain;
     display: block;
+    filter: brightness(0) saturate(100%) invert(63%) sepia(30%) saturate(500%) hue-rotate(170deg) brightness(90%);
+    transition: filter 0.3s ease;
 }
 
 .kmitl {
@@ -231,6 +232,7 @@ body {
     padding: 33px 20px;
     font-size: 18px;
     color: #fff;
+    transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 .full {
@@ -246,6 +248,7 @@ body {
     border-radius: 40px 0px 40px 40px;
     padding: 30px 50px;
     text-align: center;
+    transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 .header-content h1 {
@@ -328,14 +331,15 @@ body {
 }
 
 .box {
-    background-color: #F3E6A2;
+    background-color: var(--bg-gallery2);
     border-radius: 30px 30px 30px 0px;
     padding: 5px 20px 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    color: var(--color-text);
 }
 
 .box2 {
-    background-color: #F3E6A2;
+    background-color: var(--bg-gallery2);
     border-radius: 0px 0px 30px 30px;
     width: 160px;
     height: 70px;
@@ -343,18 +347,17 @@ body {
 }
 
 .box p {
-    color: #184274;
+    color: var(--color-text);
     font-size: 1rem;
     line-height: 1.8;
     text-align: center;
 }
-
 .box b {
     font-size: 1.2rem;
 }
 
 .arrow-btn {
-    background-color: #78C0E6;
+    background-color: var(--color-h1-bg);
     border-radius: 10px;
     width: 45px;
     height: 45px;
@@ -444,7 +447,7 @@ body {
 .slide-text {
     max-width: 500px;
     font-size: 1.5rem;
-    color: #1e2b40;
+    color: var(--color-text);
 }
 
 .nav {
@@ -508,9 +511,8 @@ body {
 
 /* Circle */
 .line {
-    stroke: #161942;
+    stroke: var(--color-text);
 }
-
 .circle-wrapper {
     width: 90vw;
     max-width: 600px;
@@ -523,7 +525,7 @@ body {
 }
 
 .circle-svg text {
-    fill: #184274;
+    fill: var(--color-text);
     paint-order: stroke;
 }
 
@@ -533,7 +535,7 @@ body {
 }
 
 .slice path {
-    fill: #f5e7b2;
+    fill: var(--bg-gallery2);
     transition: 0.3s ease;
 }
 
@@ -581,7 +583,8 @@ body {
     font-size: 1.1rem;
     pointer-events: none;
     border-width: 3px;
-    border-color: #78C0E6;
+    border-color: var(--color-h1-bg);
+    color: var(--color-text);
 }
 
 .desc {
@@ -590,7 +593,7 @@ body {
     opacity: 0;
     transition: 0.3s ease;
     pointer-events: none;
-
+    color: var(--color-text);
 }
 
 .center-box {
@@ -598,14 +601,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #78C0E6;
+    background: var(--color-h1-bg);
     padding: 14px 22px;
     border-radius: 14px;
     font-weight: bold;
     text-align: center;
-    transition: 0.3s ease;
+    transition: 0.3s ease, background-color 0.35s ease, color 0.35s ease;
     font-size: 2rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    color: var(--color-h1-text);
 }
 
 /*PJCard*/
@@ -625,7 +629,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-
+    transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 .hidden {
@@ -658,7 +662,7 @@ body {
 
 .project-title {
     font-weight: 700;
-    color: #1e2b40;
+    color: var(--color-text);
     text-shadow:
         -1px 0 #F3E6A2,
         1px 0 #F3E6A2,
@@ -669,7 +673,7 @@ body {
 }
 
 .project-desc {
-    color: #444;
+    color: var(--color-text);
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -907,7 +911,7 @@ img {
     margin-bottom: 10px;
     width: 250px;
     height: 120px;
-    background-color: #161942;
+    background-color: var(--bg-body);
     border-radius: 20px;
     position: absolute;
     overflow: hidden;
@@ -1099,3 +1103,58 @@ img {
         width: 22px;
     }
 }
+
+body.dark-mode .header-top .social img {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(20%) saturate(400%) hue-rotate(5deg) brightness(105%);
+}
+
+/* footer - เหลืองตลอด ไม่เปลี่ยนตามโหมด */
+.social-footer .social img {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(20%) saturate(400%) hue-rotate(5deg) brightness(105%);
+}
+
+.topbar-controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;        /* ชิดซ้าย */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10000;
+}
+.lang-toggle-container {
+    position: absolute;
+    top: 12px;
+    right: 80px;
+    z-index: 10001;
+    display: flex;
+    gap: 4px;
+    background-color: #F3E6A2;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    border-radius: 15px;
+    padding: 4px 12px;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    font-family: inherit !important;
+    color: #184274;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 40px;       
+    text-align: center;
+}
+
+.lang-btn.active {
+    background-color: #78C0E6;
+    animation: pop 0.3s ease;
+}
+
+.goog-te-banner-frame,
+.skiptranslate { display: none !important; }
+body.translated-ltr { top: 0 !important; }
+body { top: 0 !important; }

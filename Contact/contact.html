@@ -3,12 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IoT and Information Engineering, KMITLL</title>
     <link rel="stylesheet" href="../Contact/contact.css">
+    <link rel="stylesheet" href="../asset/darkmode-variables.css">
+    <link rel="stylesheet" href="../asset/darkmode-toggle.css">
+    <link rel="stylesheet" href="../asset/responsive.css">
 </head>
 
 <body>
+    <div id="google_translate_element" style="display:none"></div>
+
+    <div class="lang-toggle-container">
+        <button class="lang-btn active notranslate" onclick="switchLang('th', this)">TH</button>
+        <button class="lang-btn notranslate" onclick="switchLang('en', this)">EN</button>
+    </div>
+    <div class="mode-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider">
+                <span class="star">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </span>
+        </label>
+    </div>
     <header class="topbar">
         <div class="logo">
             <a href="../Home/home.html"> <img src="../asset/logo.png" alt="logodeptabbar" class="logodeptabbar"></a>
@@ -47,27 +65,26 @@
             </a>
         </nav>
     </header>
-           <main>
+    <main>
         <nav class="bch-container" role="tablist" aria-label="เลือกปริญญา">
-            <button class="bch-tab" role="tab" aria-selected="true" aria-controls="ioteonebch" id="tab-iotbch" tabindex="0">
+            <button class="bch-tab" role="tab" aria-selected="true" aria-controls="ioteonebch" id="tab-iotbch"
+                tabindex="0">
                 ภาควิชาวิศวกรรมไอโอทีและสารสนเทศ
             </button>
-            <button class="bch-tab" role="tab" aria-selected="false" aria-controls="physicbch" id="tab-phybch" tabindex="-1">
+            <button class="bch-tab" role="tab" aria-selected="false" aria-controls="physicbch" id="tab-phybch"
+                tabindex="-1">
                 หลักสูตรฟิสิกส์อุตสาหกรรม
             </button>
         </nav>
 
         <div class="contact-container">
 
-            <section class="contact-panel" id="ioteonebch" role="tabpanel"  aria-labelledby="tab-iotbch">
+            <section class="contact-panel" id="ioteonebch" role="tabpanel" aria-labelledby="tab-iotbch">
                 <div class="address-iot">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1937.9099349581938!2d100.769274!3d13.729353!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d664b84ef1417%3A0xd2e8705e1eebfc3e!2sKMITL%2012th%20Floor%20Building!5e0!3m2!1sen!2sth!4v1772184014064!5m2!1sen!2sth" 
-                    width="400" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1937.9099349581938!2d100.769274!3d13.729353!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d664b84ef1417%3A0xd2e8705e1eebfc3e!2sKMITL%2012th%20Floor%20Building!5e0!3m2!1sen!2sth!4v1772184014064!5m2!1sen!2sth"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
 
                     </iframe>
                     <div class="detail-box">
@@ -79,7 +96,7 @@
                 <div class="contact-box">
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Call.svg" alt="icon-tele">
+                            <img class="iconcontact" src="../asset/Icon/Call.svg" alt="icon-tele">
                         </div>
                         <div class="contact-detail">
                             <p>02-329-8000 ext.5129</p>
@@ -89,7 +106,7 @@
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Mail.svg" alt="icon-email">
+                            <img class="iconcontact" src="../asset/Icon/Mail.svg" alt="icon-email">
                         </div>
                         <div class="contact-detail">
                             <p>iote@kmitl.ac.th</p>
@@ -99,7 +116,7 @@
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Line.svg" alt="icon-line">
+                            <img class="iconcontact" src="../asset/Icon/Line.svg" alt="icon-line">
                         </div>
                         <div class="contact-detail">
                             <a href="https://line.me/R/ti/p/@800gkcmy?oat_content=url&ts=06181336">@iotekmitl</a>
@@ -108,16 +125,17 @@
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Facebook.svg" alt="icon-fb">
+                            <img class="iconcontact" src="../asset/Icon/Facebook.svg" alt="icon-fb">
                         </div>
                         <div class="contact-detail">
-                            <a href="https://www.facebook.com/IOTE.KMITL">Department of IoT and Information Engineering, KMITL</a>
+                            <a href="https://www.facebook.com/IOTE.KMITL">Department of IoT and Information Engineering,
+                                KMITL</a>
                         </div>
                     </div>
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/IG.svg" alt="icon-ig">
+                            <img class="iconcontact" src="../asset/Icon/IG.svg" alt="icon-ig">
                         </div>
                         <div class="contact-detail">
                             <a href="https://www.instagram.com/kmitl.iote.official/">kmitl.iote.official</a>
@@ -133,15 +151,12 @@
                 </nav>
             </section>
 
-            <section class="contact-panel" id="physicbch" role="tabpanel"  aria-labelledby="tab-phybch" hidden>
+            <section class="contact-panel" id="physicbch" role="tabpanel" aria-labelledby="tab-phybch" hidden>
                 <div class="address-iot">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.634946980191!2d100.780082!3d13.729498!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6635f0264b13%3A0x4377bf8ae9ee6c55!2sKMITL%20(Faculty%20of%20Science)!5e0!3m2!1sen!2sth!4v1772193323637!5m2!1sen!2sth" 
-                    width="400" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.634946980191!2d100.780082!3d13.729498!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6635f0264b13%3A0x4377bf8ae9ee6c55!2sKMITL%20(Faculty%20of%20Science)!5e0!3m2!1sen!2sth!4v1772193323637!5m2!1sen!2sth"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                     <div class="detail-box">
                         <h3>หลักสูตรฟิสิกส์อุตสาหกรรม ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์</h3>
@@ -152,7 +167,7 @@
                 <div class="contact-box">
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Call.svg" alt="icon-tele">
+                            <img class="iconcontact" src="../asset/Icon/Call.svg" alt="icon-tele">
                         </div>
                         <div class="contact-detail">
                             <p>02-329-8000 ext.6214</p>
@@ -161,7 +176,7 @@
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Mail.svg" alt="icon-email">
+                            <img class="iconcontact" src="../asset/Icon/Mail.svg" alt="icon-email">
                         </div>
                         <div class="contact-detail">
                             <p>SCIENCE@kmitl.ac.th</p>
@@ -170,7 +185,7 @@
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Line.svg" alt="icon-line">
+                            <img class="iconcontact" src="../asset/Icon/Line.svg" alt="icon-line">
                         </div>
                         <div class="contact-detail">
                             <p>@842xiplr</p>
@@ -179,19 +194,21 @@
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/Facebook.svg" alt="icon-fb">
+                            <img class="iconcontact" src="../asset/Icon/Facebook.svg" alt="icon-fb">
                         </div>
                         <div class="contact-detail">
-                            <a href="https://www.facebook.com/physiotkmitl">Physiot KMITL - Physics and IoT System Engineering Dual Degree Program</a>
+                            <a href="https://www.facebook.com/physiotkmitl">Physiot KMITL - Physics and IoT System
+                                Engineering Dual Degree Program</a>
                         </div>
                     </div>
 
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <img src="../asset/Icon/IG.svg" alt="icon-ig">
+                            <img class="iconcontact" src="../asset/Icon/IG.svg" alt="icon-ig">
                         </div>
                         <div class="contact-detail">
-                            <a href="https://www.instagram.com/physiot_kmitl/?igsh=MXZibTh2eGUwNmxsMw%3D%3D#">physiot_kmitl</a>
+                            <a
+                                href="https://www.instagram.com/physiot_kmitl/?igsh=MXZibTh2eGUwNmxsMw%3D%3D#">physiot_kmitl</a>
                         </div>
                     </div>
                 </div>
@@ -210,7 +227,8 @@
         <div class="foot-container">
             <div class="footer-inner">
                 <div class="footer-logo">
-                    <a href="../Home/home.html"> <img src="../asset/logo.png" alt="footer-logo" class="footer-logo-img"></a>
+                    <a href="../Home/home.html"> <img src="../asset/logo.png" alt="footer-logo"
+                            class="footer-logo-img"></a>
                 </div>
 
                 <section class="footer-contact">
@@ -248,6 +266,10 @@
         </div>
     </footer>
     <script src="../Contact/contact.js"></script>
+    <script src="../asset/darkmode.js"></script>
+    
+    <script src="../asset/js/translate.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

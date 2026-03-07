@@ -16,8 +16,9 @@
 }
 body{
   margin:0;
-     background-color: #161942;
-     font-family: 'THK2D' ,sans-serif;
+  background-color: var(--bg-body);
+  font-family: 'THK2D' ,sans-serif;
+  padding-top: 50px;
 }
 /* tab-bar */
 .logo{ margin: 0; }
@@ -33,6 +34,7 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  background-color: var(--bg-home);
 }
 
 .indicator{
@@ -141,7 +143,7 @@ body{
     justify-content: space-between; /*left-right*/
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color: #040518;
+    background-color: var(--color-footer1);
     color: #F3E6A2;
     gap: 10px;
     padding: 40px;
@@ -369,7 +371,7 @@ body{
 
 .faculty-section {
     /* พื้นหลังสีฟ้าไล่ระดับให้เหมือนในรูป */
-    background: linear-gradient(180deg, #78C0E6 0%, #D8EAF5 100%); 
+    background: var(--bg-contact-gradient);
     padding: 60px 20px;
     margin-top: 0px;
 }
@@ -465,3 +467,39 @@ body{
   /* animation */
   transform: translateY(0);
 }
+.lang-toggle-container {
+    position: absolute;
+    top: 12px;
+    right: 80px;
+    z-index: 10001;
+    display: flex;
+    gap: 4px;
+    background-color: #F3E6A2;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    border-radius: 15px;
+    padding: 4px 12px;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    font-family: inherit !important;
+    color: #184274;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 40px;       
+    text-align: center;
+}
+
+.lang-btn.active {
+    background-color: #78C0E6;
+    animation: pop 0.3s ease;
+}
+
+.goog-te-banner-frame,
+.skiptranslate { display: none !important; }
+body.translated-ltr { top: 0 !important; }
+body { top: 0 !important; }

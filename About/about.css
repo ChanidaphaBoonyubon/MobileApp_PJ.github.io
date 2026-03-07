@@ -16,7 +16,8 @@
 }
 body{
   margin:0;
-     background-color: #161942;
+  padding-top: 50px;
+  background-color: var(--bg-body);
 }
 
 /* tab-bar */
@@ -33,6 +34,7 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  background-color: var(--bg-home);
 }
 
 .indicator{
@@ -139,16 +141,14 @@ body{
 
 .footer-inner{
     display: flex;
-    justify-content: space-between; /*left-right*/
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color: #040518;
+    background-color: var(--color-footer1);  /* ← เปลี่ยนแล้ว */
     color: #F3E6A2;
     gap: 10px;
     padding: 40px;
-  
 }
-
 .footer-logo-img{
     width: 200px;
     height: auto;
@@ -368,15 +368,14 @@ body{
 }
 
 h1 {
-    background-color: #78C0E6;
-    color: white;
+    background-color: var(--color-h1-bg);  /* ← เปลี่ยนแล้ว */
+    color: var(--color-h1-text);            /* ← เปลี่ยนแล้ว */
     text-align: center;
     padding: 40px 30px;
     font-size: 60px;
     font-weight: normal;
     margin: 0px;
-    transition: padding 0.4s ease; /* ทำให้การขยายดูนุ่มนวล */
-
+    transition: padding 0.4s ease, background-color 0.35s ease, color 0.35s ease;
 }
 
 h1:hover {
@@ -405,14 +404,15 @@ h1:hover .NameEng {
 .WhatIsIoT {
     padding: 10px 10% ;
     line-height: 1.8;
-    background-color: white;
+    background-color: var(--bg-content); /* ← เปลี่ยนแล้ว */
     text-align: left;
     font-size: 25px;
+    color: var(--color-text);  /* ← เพิ่มด้วย */
 }
 
 .money {
-    background-color: #161942; 
-    color: white;
+    background-color: var(--bg-body1);     /* ← เปลี่ยนแล้ว */
+    color: var(--color-text);             /* ← เปลี่ยนแล้ว */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -433,7 +433,14 @@ h1:hover .NameEng {
     font-size: 25px;
     font-weight: bold;
     padding: 20px 10% 20px;
-    background-color: #fff;
+    background-color: var(--bg-content); /* ← เปลี่ยนแล้ว */
+    color: var(--color-text1);             /* ← เพิ่มด้วย */
+}
+.career {
+    display: none;
+    padding: 1px 10% 20px;
+    background-color: var(--bg-content); /* ← เปลี่ยนแล้ว */
+    color: var(--color-text);             /* ← เพิ่มด้วย */
 }
 .career {
     display: none;
@@ -442,6 +449,7 @@ h1:hover .NameEng {
 }
 .career.show {
     display: block;
+    background-color: var(--bg-career);
 }
 .careerH .plus img {
     transition: transform 0.3s ease;
@@ -457,6 +465,7 @@ h1:hover .NameEng {
     list-style: none;
     font-size: 23px;
     gap: 10px;
+    color: var(--color-text1);
 }
 
 .CareerContent li::before {
@@ -466,7 +475,7 @@ h1:hover .NameEng {
 }
 
 .gallery {
-    background-color: #F3E6A2; /* พื้นหลังสีเหลืองนวลตามรูป */
+    background-color: var(--bg-gallery); /* ← เปลี่ยนแล้ว */
     padding: 50px 20%;
 }
 
@@ -483,4 +492,184 @@ h1:hover .NameEng {
     border-radius: 30px; /* ขอบมนโค้งตามรูป */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     display: block;
+}
+.plus img {
+    filter: brightness(0);
+    transition: filter 0.3s ease;
+}
+
+/* Dark mode - สีเหลือง #F3E6A2 */
+body.dark-mode .plus img {
+    filter: brightness(0) invert(1);
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    background: #f5c842;
+    border-radius: 50px;
+    padding: 4px;
+    gap: 2px;
+}
+
+.lang-toggle .bubble {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.22s, color 0.22s, transform 0.15s;
+    user-select: none;
+}
+
+.lang-toggle .bubble.on  { background: #1a2340; color: #ffffff; }
+.lang-toggle .bubble.off { background: transparent; color: #1a2340; }
+.lang-toggle .bubble:hover  { transform: scale(1.08); }
+.lang-toggle .bubble:active { transform: scale(0.94); }
+
+.lang-toggle { display:flex; align-items:center; background:#f5c842; border-radius:50px; padding:4px; gap:2px; }
+.lang-toggle .bubble { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; cursor:pointer; transition:background 0.22s, color 0.22s; font-family:'Kodchasan',sans-serif; }
+.lang-toggle .bubble.on  { background:#1a2340; color:#fff; }
+.lang-toggle .bubble.off { background:transparent; color:#1a2340; }
+
+/* ซ่อน Google Translate toolbar */
+.goog-te-banner-frame,
+.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+.lang-toggle-container {
+    position: absolute;
+    top: 12px;
+    right: 80px;
+    z-index: 10001;
+    display: flex;
+    gap: 4px;
+    background-color: #F3E6A2;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    border-radius: 15px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #184274;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.lang-btn.active {
+    background-color: #78C0E6;
+    animation: pop 0.3s ease;
+}
+
+.goog-te-banner-frame,
+.skiptranslate { display: none !important; }
+body.translated-ltr { top: 0 !important; }
+body { top: 0 !important; }
+
+.bch-container{
+  
+  display: flex;
+  height: 120px;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 100%;
+}
+
+.bch-tab{
+  display: flex;
+  flex: 1;
+  height: 90px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 25px 25px 0 0;
+
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+
+  color: #F3E6A2;
+  font-size: 20px;
+  font-family: 'THK2D',sans-serif;
+
+  background-color: #184274;
+  cursor: pointer;
+
+  /* animation */
+  transform: translateY(15px);
+  transition: all 0.35s ease;
+}
+
+.bch-tab[aria-selected="true"]{
+  display: flex;
+  flex: 2;
+  padding: 20px;
+  height: 100px;
+
+  color: #040518;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+
+  background-color: #78C0E6;
+
+  /* animation */
+  transform: translateY(0);
+}
+
+.content-about[role="tabpanel"]{
+  margin: 0;
+  padding: 0;
+}
+
+.content-about[role="tabpanel"] > h1{
+  margin-top: 0;
+}
+
+.content-about[role="tabpanel"]{
+  margin-top: -20px; /*แก้ให้2,ต่อเนื่อง,เอกโทไม่เว้นกับแท็บบาร์*/
+}
+
+.poToContent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: 15px;           
+    padding: 40px 20px;
+    flex-wrap: wrap;       
+}
+.poToContent details {
+    width: 180px;            
+    background-color: #fceea7; 
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #78C0E6 ;
+    overflow: hidden;       
+    transition: all 0.3s ease;
+    padding: 0px 5px 5px;
+    font-size: 20px;
+}
+summary {
+    list-style: none;       
+    padding: 15px 0px;      
+    text-align: center;     
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
