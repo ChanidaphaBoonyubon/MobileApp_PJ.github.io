@@ -1,8 +1,9 @@
+
 <?php
-$host = "sql108.infinityfree.com";
-$user = "if0_41326950";
-$password = "bsmTeVSWDE4CwY";
-$dbname = "if0_41326950_feedback";
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "iote_web";
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
